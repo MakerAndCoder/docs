@@ -1,4 +1,4 @@
-Welcome to the Maker & Coder Documentation Hub!
+# Welcome to the Maker & Coder Documentation Hub!
 Your Ultimate Guide to MC4.0 & Beyond!
 Welcome to the Maker & Coder documentation platform—a one-stop resource for educators, students, and tech enthusiasts exploring the MC4.0 microcontroller and its powerful ecosystem. Whether you're learning robotics, AI, IoT, or embedded systems, this guide will provide everything you need to get started, troubleshoot, and master MC4.0.
 
