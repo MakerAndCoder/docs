@@ -4,7 +4,7 @@
 
 ### Example
 
-- Loop print Hello M5
+- Loop print Hello MC4.0
 
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_loop_example.svg"> 
 
