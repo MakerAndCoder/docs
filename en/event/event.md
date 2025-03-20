@@ -6,18 +6,20 @@
 
 - Loop print Hello MC4.0
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_loop_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_loop_example.svg"> 
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-setScreenColor(0x222222)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
 while True:
-  print('Hello M5')
+  print('Hello MC4.0')
   wait_ms(2)
 ```
 
