@@ -26,7 +26,7 @@ while True:
 
 ### API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_loop.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_loop.svg"> 
 
 ```python
 while True:
@@ -41,15 +41,22 @@ while True:
 
 - Getting the state of a key by callback or polling
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_example1.svg">
+
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_example2.svg">
+
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_example3.svg">
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-setScreenColor(0x222222)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+
 
 def multiBtnCb_AB():
   # global params
@@ -63,18 +70,19 @@ def buttonA_wasPressed():
   pass
 btnA.wasPressed(buttonA_wasPressed)
 
+
 while True:
   if btnB.wasPressed():
-    print('Button B wasPressed')
-  if btnC.isPressed():
-    print('Button C Pressed')
+    print('Button B was Press')
+  elif btnC.pressFor(0.8):
+    print('Button C Long Press')
   wait_ms(2)
 ```
 
 ### API
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_init.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_init.svg"> 
 
 ```python
 btn = btn.attach([pin])
@@ -82,12 +90,12 @@ btn = btn.attach([pin])
 
 - Initialize the keys and specify the input pins.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_callback.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_callback.svg">
 
 ```python
 def buttonA_wasPressed():
   # global params
-  print('Button A Pressed')
+  # your code here
   pass
 btnA.wasPressed(buttonA_wasPressed)
 ```
@@ -98,26 +106,26 @@ btnA.wasPressed(buttonA_wasPressed)
   - LongPress
   - wasDoublePress
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_callback_multi.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_callback_multi.svg"> 
 
 ```python
 def multiBtnCb_AB():
   # global params
-  print('Button A + B Pressed')
+  # your code here
   pass
 btn.multiBtnCb(btnA,btnB,multiBtnCb_AB)
 ```
 - Bind multi-key event callback function, only support two-key combination, triggered when pressing keys at the same time.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_read.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_read.svg"> 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_button_read_status.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_button_read_status.svg"> 
 
 ```python
-if btnB.wasPressed():
-  print('Button B wasPressed')
-if btnC.isPressed():
-  print('Button C Pressed')
+if btnA.wasPressed():
+  print('Button A wasPressed')
+if btnA.pressFor(0.8):
+  print('Button A Pressed')
 ```
 
 - Read current key state, return True/False according to event configuration, optional events.
@@ -125,8 +133,7 @@ if btnC.isPressed():
   - wasReleased
   - LongPress
   - wasDoublePress
-  - Pressed
-  - Released
+
 
 ## Software Timer
 
@@ -134,15 +141,18 @@ if btnC.isPressed():
 
 - Configure the software timer to print in 100ms cycles.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_software_timer_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_software_timer_example.svg"> 
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-setScreenColor(0x222222)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+
 
 @timerSch.event('timer1')
 def ttimer1():
@@ -157,7 +167,7 @@ timerSch.run('timer1', 100, 0x00)
 
 ### API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_software_timer_callback.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_software_timer_callback.svg"> 
 
 ```python
 @timerSch.event('timer1')
@@ -168,7 +178,7 @@ def ttimer1():
 
 - Setting the Software Timer Callback Function
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_software_timer_set.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_software_timer_set.svg"> 
 
 ```python
 timerSch.setTimer('timer1', 100, 0x00)
@@ -178,7 +188,7 @@ timerSch.setTimer('timer1', 100, 0x00)
   - PERIODIC 0x00: Cycle execution
   - ONE_SHOT 0x01: Single execution
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_software_timer_start.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_software_timer_start.svg"> 
 
 ```python
 timerSch.run('timer1', 100, 0x00)
@@ -189,7 +199,7 @@ timerSch.run('timer1', 100, 0x00)
   - ONE_SHOT 0x01: Single execution
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_software_timer_stop.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_software_timer_stop.svg"> 
 
 ```python
 timerSch.stop('timer1')
@@ -203,19 +213,21 @@ timerSch.stop('timer1')
 
 - Configure the hardware timer to print in 100ms cycles.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_hardware_timer_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_hardware_timer_example.svg"> 
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-setScreenColor(0x222222)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
 def callback_timer3(_arg):
   # global params
-  print('This is a hardware timer!')
+  print('This is a software timer!')
   pass
 
 
@@ -224,9 +236,9 @@ timerSch.timer.init(period=100, mode=timerSch.timer.PERIODIC, callback=callback_
 
 ### API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_hardware_timer_set.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_hardware_timer_set.svg">
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/event/uiflow_block_hardware_timer_callback.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/event/uiflow_block_hardware_timer_callback.svg"> 
 
 
 ```python
