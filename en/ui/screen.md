@@ -4,22 +4,24 @@
 
 Adjusts the screen brightness and switches the screen color.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_example.svg"> 
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import time
 
-setScreenColor(0x222222)
-lcd.setBrightness(30)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
+screen.set_screen_brightness(30)
 while True:
-  setScreenColor(0xff0000)
+  screen.set_screen_bg_color(0xff0000)
   wait(1)
-  setScreenColor(0x3366ff)
+  screen.set_screen_bg_color(0x3333ff)
   wait(1)
   wait_ms(2)
 ```
