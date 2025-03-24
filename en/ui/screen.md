@@ -28,7 +28,7 @@ while True:
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor.svg"> 
 
 ```python
 setScreenColor(0xff0000)
@@ -37,7 +37,7 @@ setScreenColor(0xff0000)
 - Setting the screen color
   
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor_rgb_value.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor_rgb_value.svg"> 
 
 ```python
 setScreenColor(0xff0000)
@@ -46,7 +46,7 @@ setScreenColor(0xff0000)
 - Set the screen color, and modify the color by modifying the RGB value.
   - (R:0-255  G:0-255 B:0-255)
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor_option.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_set_backgroundcolor_option.svg"> 
 
 ```python
 setScreenColor(0xff0000)
@@ -57,7 +57,7 @@ setScreenColor(0xff0000)
   - `RGB`: Enter RGB values to toggle the color panel colors.
   - `HEX`: input color converted to hexadecimal value to switch values
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_set_rotate_mode.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_set_rotate_mode.svg"> 
 
 ```python
 lcd.setRotation(0)
@@ -69,7 +69,7 @@ lcd.setRotation(0)
   - "2": 90° counterclockwise rotation
   - "3": 0° rotation, horizontal display
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/ui/screen/uiflow_block_screen_set_brightness.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ui/screen/uiflow_block_screen_set_brightness.svg"> 
 
 ```python
 lcd.setBrightness(30)
