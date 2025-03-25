@@ -45,6 +45,7 @@ adc0 = machine.ADC([pin])
 adc0.width(machine.ADC.WIDTH_12BIT)
 ```
 
+<br /><br />
 
 - Setting ADC input attenuation
   - `ADC.ATTN_0DB`: 0dB attenuation, providing a maximum input voltage of 1.00v.
