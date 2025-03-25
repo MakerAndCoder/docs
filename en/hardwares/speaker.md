@@ -6,7 +6,7 @@
 
 ### Example
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_speaker_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker_example.svg"> 
 
 
 ```python
@@ -26,7 +26,7 @@ speaker.tone(1800, 200)
 
 ### API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_speaker.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker.svg"> 
 
 ```python
 speaker.tone(1800, 200)
@@ -35,7 +35,7 @@ speaker.tone(1800, 200)
 - Setting the playback sound frequency and duration
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_speaker_volume.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker_volume.svg"> 
 
 ```python
 speaker.setVolume(1)
@@ -45,7 +45,7 @@ speaker.setVolume(1)
   - Volume range: 0-100
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_speaker_tone.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker_tone.svg"> 
 
 ```python
 speaker.sing(220, 1)
@@ -54,13 +54,13 @@ speaker.sing(220, 1)
 - Play the specified tone and beat
 
 
-## Speaker For M5Core2
+## Speaker For MC4.0
 
 ### Example
 
 - Control playtone
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone_example.svg"> 
 
 ```python
 from m5stack import *
@@ -78,7 +78,7 @@ speaker.playTone(554, 1, volume=6)
 
 - Control playback of local wav files
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_example.svg"> 
 
 ```python
 from m5stack import *
@@ -99,9 +99,9 @@ speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=sp
 ### API
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_freq.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_freq.svg"> 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone.svg"> 
 
 
 ```python
@@ -111,7 +111,7 @@ speaker.playTone(554, 1, volume=6)
 - Play the specified tone (frequency) and set the playback volume.
   - Volume range: 0-6
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_wav_file.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_wav_file.svg"> 
 
 ```python
 speaker.playWAV("res/ding.wav", volume=6)
@@ -119,7 +119,7 @@ speaker.playWAV("res/ding.wav", volume=6)
 
 - Play wav files in the local file system, and set the playback volume.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_file_path.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_file_path.svg"> 
 
 ```python
 speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=speaker.CHN_LR, volume=6)
@@ -127,7 +127,7 @@ speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=sp
 
 - Play the wav file in the local file system `res/filename.wav` or SD card `/sd/filename.wav`, and specify the sample rate and audio data format and channel at the same time.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_upload_wav_file.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_upload_wav_file.svg"> 
 
 ```python
 speaker.playWAV("res/ding.wav", volume=0)
@@ -137,7 +137,7 @@ speaker.playWAV("res/ding.wav", volume=0)
 - Provide an interface to upload wav files to the device in online programming mode, click the + sign to upload operation.
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_url_wav_file.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_url_wav_file.svg"> 
 
 ```python
 speaker.playCloudWAV('https://xxxxx.wav', volume=6)
