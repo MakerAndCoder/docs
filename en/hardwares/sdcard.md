@@ -44,9 +44,7 @@ with open('/sd/test.txt', 'w+') as fs:
     pass
 
 ```
-
-
-
+<br><br>
 - Write to file
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_write.svg"> 
 
@@ -56,7 +54,7 @@ fs.write('Hello World')
 ```
 
 
-
+<br><br>
 - Manipulate the file cursor movement position
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_seek.svg"> 
 
@@ -66,7 +64,7 @@ fs.seek(0)
 ```
 
 
-
+<br><br>
 - Creating Folders
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_mkdir.svg"> 
 
@@ -75,7 +73,7 @@ fs.seek(0)
 fs.seek(0)
 ```
 
-
+<br><br>
 - Deleting a file with a specified path
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_remove.svg"> 
 
@@ -85,7 +83,7 @@ os.remove('/sd/filename')
 ```
 
 
-
+<br><br>
 - Delete a specified path folder
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_rmdir.svg"> 
 
@@ -95,7 +93,7 @@ os.rmdir('/sd/folder')
 ```
 
 
-
+<br><br>
 - Renaming of documents
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_rename.svg"> 
 
@@ -104,7 +102,7 @@ os.rmdir('/sd/folder')
 os.rename('/sd/old', '/sd/new')
 ```
 
-
+<br><br>
 - Read all data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_all.svg"> 
 
@@ -113,7 +111,7 @@ os.rename('/sd/old', '/sd/new')
 fs.read()
 ```
 
-
+<br><br>
 - Read data of specified length
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_bytes.svg"> 
 
@@ -122,7 +120,7 @@ fs.read()
 fs.read(1024)
 ```
 
-
+<br><br>
 - Read a line of data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_line.svg"> 
 
@@ -131,7 +129,7 @@ fs.read(1024)
 fs.readline()
 ```
 
-
+<br><br>
 - Read the current file cursor position
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_get_seek.svg"> 
 
@@ -141,7 +139,7 @@ fs.tell()
 ```
 
 
-
+<br><br>
 - Viewing Catalog Files
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_listdir.svg"> 
 
@@ -150,7 +148,7 @@ fs.tell()
 os.listdir('/sd/')
 ```
 
-
+<br><br>
 - Check if the path is a file
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_is_file.svg"> 
 
@@ -159,7 +157,7 @@ os.listdir('/sd/')
 os.stat('/sd/')[0] == 0x8000
 ```
 
-
+<br><br>
 - Check if the path is a directory
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_is_directory.svg"> 
 
@@ -169,7 +167,7 @@ os.stat('/sd/')[0] == 0x4000
 ```
 
 
-
+<br><br>
 - Check if a file is included in the path
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_exist.svg"> 
 
