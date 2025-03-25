@@ -27,7 +27,7 @@ with open('/sd/test.txt', 'r') as fs:
 ```
 
 ## API
-
+- Setting the SDCard bus clock frequency
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_init_clock.svg"> 
 
 
@@ -35,7 +35,6 @@ with open('/sd/test.txt', 'r') as fs:
 sdcard.SDCard(20000000)
 ```
 
-- Setting the SDCard bus clock frequency
 
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_open.svg"> 
