@@ -39,7 +39,7 @@ while True:
 ```python
 machine.PWM(26, freq=10000, duty=50, timer=0)
 ```
-
+ <br />  <br /> 
 
 - Set the PWM frequency.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_freq.svg"> 
