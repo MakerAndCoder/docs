@@ -48,7 +48,7 @@ machine.PWM(26, freq=10000, duty=50, timer=0)
 PWM0.freq(1)
 ```
 
-
+ <br />  <br /> 
 - Set the PWM duty cycle.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_duty.svg"> 
 
@@ -56,7 +56,7 @@ PWM0.freq(1)
 PWM0.duty(0)
 ```
 
-
+ <br />  <br /> 
 - Pause PWM signal generation.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_pause.svg"> 
 
@@ -64,7 +64,7 @@ PWM0.duty(0)
 PWM0.pause()
 ```
 
-
+ <br />  <br /> 
 - Resume PWM signal generation.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_resume.svg"> 
 
@@ -72,7 +72,7 @@ PWM0.pause()
 PWM0.resume()
 ```
 
-
+ <br />  <br /> 
 - Hold the PWM signal for a few microseconds.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_hold_us.svg"> 
 
