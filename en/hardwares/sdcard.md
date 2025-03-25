@@ -36,7 +36,7 @@ sdcard.SDCard(20000000)
 ```
 
 
-
+- Opens the specified file and performs read or write operations inside it. r and r+ modes must exist or an error will occur. a, w, and w+ modes automatically create the file if it does not exist.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_open.svg"> 
 
 
@@ -46,9 +46,9 @@ with open('/sd/test.txt', 'w+') as fs:
 
 ```
 
-- Opens the specified file and performs read or write operations inside it. r and r+ modes must exist or an error will occur. a, w, and w+ modes automatically create the file if it does not exist.
 
 
+- Write to file
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_write.svg"> 
 
 
@@ -56,9 +56,9 @@ with open('/sd/test.txt', 'w+') as fs:
 fs.write('Hello World')
 ```
 
-- Write to file
 
 
+- Manipulate the file cursor movement position
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_seek.svg"> 
 
 
@@ -66,9 +66,9 @@ fs.write('Hello World')
 fs.seek(0)
 ```
 
-- Manipulate the file cursor movement position
 
 
+- Creating Folders
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_mkdir.svg"> 
 
 
@@ -76,8 +76,8 @@ fs.seek(0)
 fs.seek(0)
 ```
 
-- Creating Folders
 
+- Deleting a file with a specified path
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_remove.svg"> 
 
 
@@ -85,9 +85,9 @@ fs.seek(0)
 os.remove('/sd/filename')
 ```
 
-- Deleting a file with a specified path
 
 
+- Delete a specified path folder
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_rmdir.svg"> 
 
 
@@ -95,9 +95,9 @@ os.remove('/sd/filename')
 os.rmdir('/sd/folder')
 ```
 
-- Delete a specified path folder
 
 
+- Renaming of documents
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_rename.svg"> 
 
 
@@ -105,8 +105,8 @@ os.rmdir('/sd/folder')
 os.rename('/sd/old', '/sd/new')
 ```
 
-- Renaming of documents
 
+- Read all data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_all.svg"> 
 
 
@@ -114,8 +114,8 @@ os.rename('/sd/old', '/sd/new')
 fs.read()
 ```
 
-- Read all data
 
+- Read data of specified length
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_bytes.svg"> 
 
 
@@ -123,8 +123,8 @@ fs.read()
 fs.read(1024)
 ```
 
-- Read data of specified length
 
+- Read a line of data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_read_line.svg"> 
 
 
@@ -132,9 +132,8 @@ fs.read(1024)
 fs.readline()
 ```
 
-- Read a line of data
 
-
+- Read the current file cursor position
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_get_seek.svg"> 
 
 
@@ -142,9 +141,9 @@ fs.readline()
 fs.tell()
 ```
 
-- Read the current file cursor position
 
 
+- Viewing Catalog Files
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_listdir.svg"> 
 
 
@@ -152,8 +151,8 @@ fs.tell()
 os.listdir('/sd/')
 ```
 
-- Viewing Catalog Files
 
+- Check if the path is a file
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_is_file.svg"> 
 
 
@@ -161,8 +160,8 @@ os.listdir('/sd/')
 os.stat('/sd/')[0] == 0x8000
 ```
 
-- Check if the path is a file
 
+- Check if the path is a directory
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_is_directory.svg"> 
 
 
@@ -170,9 +169,9 @@ os.stat('/sd/')[0] == 0x8000
 os.stat('/sd/')[0] == 0x4000
 ```
 
-- Check if the path is a directory
 
 
+- Check if a file is included in the path
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_exist.svg"> 
 
 
@@ -180,5 +179,5 @@ os.stat('/sd/')[0] == 0x4000
 '' in os.listdir('/sd/')
 ```
 
-- Check if a file is included in the path
+
 
