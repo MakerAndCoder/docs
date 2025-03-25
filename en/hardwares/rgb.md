@@ -134,7 +134,7 @@ rgb.setColor(1, 0xff0000)
 #>Description|Select a single lamp bead and switch the adjustment mode to switch the color.
 
 <div class="tip"><div class="tip-title">Description</div> <div class="tip-content">Select a single lamp bead and switch the adjustment mode to switch the color.</div></div>
-
+<br>
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_option.svg"> 
 
 ```python
