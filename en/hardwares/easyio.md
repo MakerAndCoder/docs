@@ -7,17 +7,18 @@ The numerical values of the digital and analog pins are read and displayed on th
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_demo1.svg"> 
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 from easyIO import *
 
-screen = M5Screen()
+
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
-label0 = M5Label('label0', x=130, y=60, color=0x000, font=FONT_MONT_14, parent=None)
-label1 = M5Label('label1', x=130, y=102, color=0x000, font=FONT_MONT_14, parent=None)
+label0 = MCLabel('label0', x=80, y=60, color=0x000, font=FONT_MONT_14, parent=None)
+label1 = MCLabel('label1', x=80, y=100, color=0x000, font=FONT_MONT_14, parent=None)
 
 label0.set_text(str(analogRead(39)))
 label1.set_text(str(digitalRead(0)))
@@ -33,13 +34,6 @@ str(analogRead(39))
 
 - Set the ADC pin and read the analog value.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_set_analog_read_pin.svg"> 
-
-```python
-str(analogRead(39))
-```
-
-- Set the ADC pin and read the analog value.
 
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_digital_read_pin.svg"> 
 
