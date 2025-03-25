@@ -70,7 +70,7 @@ rgb.setColorAll(0x000000)
 - numerical value
   - "6":Sixth lamp bead
   - "10":The tenth lamp bead
-  - "0xff0000":RGB值
+  - "0xff0000":RGB
 
 #>Description|The right bead is the first to the fifth bead, the left represents the sixth to the tenth bead.
 
