@@ -71,8 +71,11 @@ rgb.setColorAll(0x000000)
   - "6":Sixth lamp bead
   - "10":The tenth lamp bead
   - "0xff0000":RGB
+<div style="border-left: 4px solid #3B82F6; background-color: #F8FAFC; padding: 10px; border-radius: 6px;">
+<strong style="color: #3B82F6;">🔖 Description</strong>
+<p>The right bead is the first to the fifth bead, the left represents the sixth to the tenth bead.</p>
+</div>
 
-#>Description|The right bead is the first to the fifth bead, the left represents the sixth to the tenth bead.
 
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color.svg"> 
