@@ -10,10 +10,14 @@
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
-setScreenColor(0x222222)
+
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+
 
 speaker.setVolume(90)
 speaker.sing(220, 1)
