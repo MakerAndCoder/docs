@@ -63,11 +63,11 @@ speaker.sing(220, 1)
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone_example.svg"> 
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-screen = M5Screen()
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
@@ -81,12 +81,12 @@ speaker.playTone(554, 1, volume=6)
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_example.svg"> 
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import time
 
-screen = M5Screen()
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
