@@ -4,17 +4,19 @@
 
 Set the vibration intensity and vibrate once every second.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/vibration/uiflow_block_vibration_demo.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/vibration/uiflow_block_vibration_demo.svg"> 
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import time
 
-screen = M5Screen()
+
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
+
 
 power.setVibrationIntensity(255)
 while True:
@@ -27,7 +29,7 @@ while True:
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_on.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_on.svg"> 
 
 ```python
 power.setVibrationEnable(True)
@@ -36,7 +38,7 @@ power.setVibrationEnable(True)
 - Turn on the motor vibration.
   
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_off.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_off.svg"> 
 
 ```python
 power.setVibrationEnable(False)
@@ -44,7 +46,7 @@ power.setVibrationEnable(False)
  
 - Turn off the motor vibration.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_vibrate_time.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_vibrate_time.svg"> 
 
 ```python
 power.setVibrationEnable(True)
@@ -55,7 +57,7 @@ wait_ms(2)
 
 - Set the vibration duration.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_vibrate_intensity.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/vibration/uiflow_block_vibration_set_motor_vibrate_intensity.svg"> 
 
 ```python
 power.setVibrationIntensity(255)
