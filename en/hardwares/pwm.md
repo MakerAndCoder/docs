@@ -33,50 +33,52 @@ while True:
 
 ## API
 
+- Set the pin, frequency, duty cycle, and timer selection for generating PWM signals.
+- 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm.svg"> 
 
 ```python
 machine.PWM(26, freq=10000, duty=50, timer=0)
 ```
 
-- Set the pin, frequency, duty cycle, and timer selection for generating PWM signals.
 
+- Set the PWM frequency.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_freq.svg"> 
 
 ```python
 PWM0.freq(1)
 ```
 
-- Set the PWM frequency.
 
+- Set the PWM duty cycle.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_duty.svg"> 
 
 ```python
 PWM0.duty(0)
 ```
 
-- Set the PWM duty cycle.
 
+- Pause PWM signal generation.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_pause.svg"> 
 
 ```python
 PWM0.pause()
 ```
 
-- Pause PWM signal generation.
 
+- Resume PWM signal generation.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_resume.svg"> 
 
 ```python
 PWM0.resume()
 ```
 
-- Resume PWM signal generation.
 
+- Hold the PWM signal for a few microseconds.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm_hold_us.svg"> 
 
 ```python
 PWM0.hold_us(0)
 ```
 
-- Hold the PWM signal for a few microseconds.
+
