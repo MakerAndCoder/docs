@@ -4,17 +4,21 @@
 
 Set the Watch Dog Timer to reset the device when the program abnormally fails to perform the feed operation at the expected time.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/wdt/uiflow_block_wdt_example.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/wdt/uiflow_block_wdt_example.svg"> 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 from machine import WDT
 import time
 
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
-setScreenColor(0x222222)
+label0 = MCLabel('label0', x=39, y=49, color=0x000, font=FONT_MONT_14, parent=None)
+label1 = MCLabel('label1', x=209, y=49, color=0x000, font=FONT_MONT_14, parent=None)
 
 wdt = WDT(timeout=2000)
 while True:
@@ -25,7 +29,7 @@ while True:
 
 #### API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/wdt/uiflow_block_wdt_init.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/wdt/uiflow_block_wdt_init.svg"> 
 
 ```python
 wdt = WDT(timeout=2000)
@@ -33,7 +37,7 @@ wdt = WDT(timeout=2000)
 
 - Initialize Watch Dog Timer and set the timeout period
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/wdt/uiflow_block_wdt_feed.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/wdt/uiflow_block_wdt_feed.svg"> 
 
 
 ```python
