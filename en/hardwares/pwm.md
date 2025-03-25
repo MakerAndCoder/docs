@@ -34,7 +34,6 @@ while True:
 ## API
 
 - Set the pin, frequency, duty cycle, and timer selection for generating PWM signals.
-- 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pwm/uiflow_block_pwm.svg"> 
 
 ```python
