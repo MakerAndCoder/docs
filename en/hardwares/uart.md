@@ -77,7 +77,7 @@ str(uart1.read())
 ```python
 label0.set_text(str(uart1.read(10)))
 ```
-   - "10": Sets the maximum number of bytes.
+"10": Sets the maximum number of bytes.
 
 
 <br> <br>
