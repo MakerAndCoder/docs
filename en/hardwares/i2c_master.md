@@ -7,17 +7,18 @@ Scan I2C device addresses and print them to the serial port.
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/i2c%20master/uiflow_block_i2c_master_demo.svg"> 
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import i2c_bus
 
-screen = M5Screen()
+
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
 i2c0 = i2c_bus.easyI2C(i2c_bus.PORTA, 0x00, freq=400000)
-i2c0.addr = 0x68
+i2c0.addr=(0x68)
 print(i2c0.scan())
 ```
 
