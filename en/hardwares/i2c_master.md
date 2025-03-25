@@ -30,7 +30,7 @@ print(i2c0.scan())
 ```python
 i2c0 = i2c_bus.easyI2C(i2c_bus.PORTA, 0x00, freq=400000)
 ```
-
+<br /><br />
   
 - Initialize an I2C bus on the specified GPIO pins, set the device address and communication frequency.
 
@@ -39,7 +39,7 @@ i2c0 = i2c_bus.easyI2C(i2c_bus.PORTA, 0x00, freq=400000)
 ```python
 i2c0 = i2c_bus.easyI2C((0, 0), 0x00, freq=400000)
 ```
- 
+ <br /><br />
 - Set the I2C communication address.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_set_slave_addr.svg"> 
@@ -47,7 +47,7 @@ i2c0 = i2c_bus.easyI2C((0, 0), 0x00, freq=400000)
 ```python
 i2c0.addr = 0x68
 ```
-
+<br /><br />
 - Check if devices are available on the I2C bus and convert the result to a string.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_available.svg"> 
@@ -55,7 +55,7 @@ i2c0.addr = 0x68
 ```python
 str(i2c0.available())
 ```
-
+<br /><br />
 - Scan for all I2C devices on the bus and convert the list of found device addresses to a string.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_scan.svg"> 
@@ -63,7 +63,7 @@ str(i2c0.available())
 ```python
 str(i2c0.scan())
 ```
-
+<br /><br />
 - Read one byte of data from the scanned I2C device.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_read_req.svg"> 
@@ -71,7 +71,7 @@ str(i2c0.scan())
 ```python
 str(i2c0.read_u8(i2c0.scan()))
 ```
-
+<br /><br />
 - Read 16-bit data from the specified I2C device address (in big-endian or little-endian order) and convert it to a string.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_read_res.svg"> 
@@ -79,7 +79,7 @@ str(i2c0.read_u8(i2c0.scan()))
 ```python
 str(i2c0.read_u16(0x00, byteorder="big"))
 ```
-
+<br /><br />
 
 - Read a specified number of bytes from the specified I2C device address and register, and convert the data to a string.
 
@@ -88,7 +88,7 @@ str(i2c0.read_u16(0x00, byteorder="big"))
 ```python
 str(i2c0.read_reg(0x00, 0))
 ```
-
+<br /><br />
 - Read data of a specified type from the specified I2C device address and register, and convert it to a string. Data types can be UINT8LE, UINT16LE, UINT32LE, etc.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_read_mem_data.svg"> 
@@ -96,7 +96,7 @@ str(i2c0.read_reg(0x00, 0))
 ```python
 str(i2c0.read_mem_data(0, 0, i2c_bus.UINT8LE))
 ```
-
+<br /><br />
 - Read data of a specified type from the specified I2C device address and convert it to a string. Data types can be UINT8LE, UINT16LE, UINT32LE, etc.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_read_data.svg"> 
@@ -104,7 +104,7 @@ str(i2c0.read_mem_data(0, 0, i2c_bus.UINT8LE))
 ```python
 str(i2c0.read_data(0, i2c_bus.UINT8LE))
 ```
-
+<br /><br />
 
 - Get the element at the specified index from a list and convert it to a string.
 
@@ -113,7 +113,7 @@ str(i2c0.read_data(0, i2c_bus.UINT8LE))
 ```python
 str([][0])
 ```
-
+<br /><br />
 - Write one byte of data to the specified I2C device register.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_write_byte.svg"> 
@@ -121,7 +121,7 @@ str([][0])
 ```python
 i2c0.write_u8(0x00, 0x00)
 ```
-
+<br /><br />
 
 - Write 16-bit data to the specified I2C device register with big-endian or little-endian byte order.
 
@@ -130,7 +130,7 @@ i2c0.write_u8(0x00, 0x00)
 ```python
 i2c0.write_u16(0x00, 0x0000, byteorder="big")
 ```
-
+<br /><br />
 
 - Write data of type UINT8LE to the register at address 0 of the I2C device. The data type can be UINT8LE, UINT16LE, UINT32LE, etc.
 
@@ -139,7 +139,7 @@ i2c0.write_u16(0x00, 0x0000, byteorder="big")
 ```python
 i2c0.write_mem_data(0, 0, i2c_bus.UINT8LE)
 ```
-
+<br /><br />
 - Write data of a specified type to the I2C device.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/i2c%20master/uiflow_block_iic_write_data.svg"> 
@@ -147,7 +147,7 @@ i2c0.write_mem_data(0, 0, i2c_bus.UINT8LE)
 ```python
 i2c0.write_data(0, i2c_bus.UINT8LE)
 ```
-
+<br /><br />
 - Write a list of byte data to the specified I2C device register.
 
 
