@@ -34,11 +34,7 @@ with open('/sd/test.txt', 'r') as fs:
 ```python
 sdcard.SDCard(20000000)
 ```
-
-
-
-
-
+<br>
 - Opens the specified file and performs read or write operations inside it. r and r+ modes must exist or an error will occur. a, w, and w+ modes automatically create the file if it does not exist.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/sdcard/uiflow_block_sd_file_open.svg"> 
 
