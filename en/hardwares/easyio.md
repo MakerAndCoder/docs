@@ -4,7 +4,7 @@
 
 The numerical values of the digital and analog pins are read and displayed on the screen
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_demo1.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_demo1.svg"> 
 
 ```python
 from MakerAndCoder import *
@@ -26,7 +26,7 @@ label1.set_text(str(digitalRead(0)))
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_analog_read_pin.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_analog_read_pin.svg"> 
 
 ```python
 str(analogRead(39))
@@ -35,7 +35,7 @@ str(analogRead(39))
 - Set the ADC pin and read the analog value.
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_digital_read_pin.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_digital_read_pin.svg"> 
 
 ```python
 str(digitalRead(0))
@@ -43,7 +43,7 @@ str(digitalRead(0))
 
 - Set the digital pin and read the level value.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_map.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_map.svg"> 
 
 ```python
 str(map_value(0, 0, 1023, 0, 4))
@@ -56,7 +56,7 @@ str(map_value(0, 0, 1023, 0, 4))
   - "0": The minimum output value of the map
   - "4": The maximum output value of the map
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_analog_write_pin_duty.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_analog_write_pin_duty.svg"> 
 
 ```python
 analogWrite(26, 0)
@@ -64,7 +64,7 @@ analogWrite(26, 0)
 
 - Set the duty cycle of the analog output pin.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_digital_write_pin_vale.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_digital_write_pin_vale.svg"> 
 
 ```python
 digitalWrite(26, 0)
@@ -72,7 +72,7 @@ digitalWrite(26, 0)
 
 - Set the output level of the digital pin.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/easyio/uiflow_block_easyio_toggle_pin.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/easyio/uiflow_block_easyio_toggle_pin.svg"> 
 
 ```python
 toggleIO(26)
