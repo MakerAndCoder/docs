@@ -4,23 +4,22 @@
 
 Driving RGB light strip flashing
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_RGB_demo.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_RGB_demo.svg"> 
 
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-setScreenColor(0x111111)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
 R = None
 G = None
 B = None
 i = None
-
-circle0 = M5Circle(95, 90, 15, 0xFFFFFF, 0xFFFFFF)
-circle1 = M5Circle(220, 90, 15, 0xFFFFFF, 0xFFFFFF)
 
 import random
 
@@ -37,12 +36,11 @@ while True:
     rgb.setColorFrom(1, 5, (G << 16) | (R << 8) | B)
     rgb.setBrightness(i)
   wait_ms(2)
-
 ```
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_color.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_color.svg"> 
 
 ```python
 rgb.setColorAll(0xff0000)
@@ -51,7 +49,7 @@ rgb.setColorAll(0xff0000)
 - Setting the color of all lights
   
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_color_value.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_color_value.svg"> 
 
 ```python
 rgb.setColorAll(0x000000)
@@ -60,7 +58,7 @@ rgb.setColorAll(0x000000)
 - Setting the color RGB value of all lamp beads
   - (R:0-255  G:0-255 B:0-255)
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_color_option.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_color_option.svg"> 
 
 ```python
 rgb.setColorAll(0x000000)
@@ -71,7 +69,7 @@ rgb.setColorAll(0x000000)
   - `RGB`: Input the RGB value to switch the strip color
   - `HEX`: Input color-converted hexadecimal values for switching lamp bead colors.
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color.svg"> 
 
 ```python
 rgb.setColorFrom(6, 10, 0xff0000)
@@ -85,7 +83,7 @@ rgb.setColorFrom(6, 10, 0xff0000)
 #>Description|The right bead is the first to the fifth bead, the left represents the sixth to the tenth bead.
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_value.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_value.svg"> 
 
 ```python
 rgb.setColorFrom(6, 10, 0xff0000)
@@ -94,7 +92,7 @@ rgb.setColorFrom(6, 10, 0xff0000)
 - Select lamp beads on different sides and switch colors by RGB values
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_option.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_option.svg"> 
 
 ```python
 rgb.setColorFrom(6, 10, 0xff0000)
@@ -108,7 +106,7 @@ rgb.setColorFrom(6, 10, 0xff0000)
 
 #>Instructions|Select different sides of the light strip and switch the adjustment mode to switch the color
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_index_color.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_index_color.svg"> 
 
 ```python
 rgb.setColor(1, 0xff0000)
@@ -119,7 +117,7 @@ rgb.setColor(1, 0xff0000)
   - "0xff0000": Color values
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_index_color_value.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_index_color_value.svg"> 
 
 ```python
 rgb.setColor(1, 0xff0000)
@@ -129,7 +127,7 @@ rgb.setColor(1, 0xff0000)
   - (R:0-255  G:0-255 B:0-255)
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_option.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_side_color_option.svg"> 
 
 ```python
 rgb.setColor(1, 0xff0000)
@@ -143,7 +141,7 @@ rgb.setColor(1, 0xff0000)
 #>Description|Select a single lamp bead and switch the adjustment mode to switch the color.
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/hardwares/rgb/uiflow_block_rgb_bar_brightness.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rgb/uiflow_block_rgb_bar_brightness.svg"> 
 
 ```python
 rgb.setBrightness(10)
