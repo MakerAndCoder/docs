@@ -2,7 +2,7 @@
 
 #>Speaker Frequency Setting:| Since the hearing range of the average person in the 20~20KHz, so when you set the frequency is too low, or too high, it is not heard!
 
-## Speaker For M5Core
+## Speaker For MC4.0
 
 ### Example
 
