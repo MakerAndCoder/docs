@@ -30,13 +30,6 @@ while True:
 ```
 
 ## API
-
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_set_time_ntp_host_and_timezone.svg"> 
-
-```python
-rtc.settime('ntp', host='cn.pool.ntp.org', tzone=8)
-```
-
 - Set the time through the NTP (Network Time Protocol) host server and adjust according to the time zone. You can choose the following NTP servers:
 
 - **cn.pool.ntp.org**: China NTP server
@@ -48,23 +41,32 @@ rtc.settime('ntp', host='cn.pool.ntp.org', tzone=8)
 - **de.pool.ntp.org**: Germany NTP server
 
 #> Synchronize with the NTP server `cn.pool.ntp.org` to set the time and adjust according to the +8 hour time zone offset.
-  
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_set_time_ntp_host_and_timezone.svg"> 
 
+```python
+rtc.settime('ntp', host='cn.pool.ntp.org', tzone=8)
+```
+
+
+  <br><br>
+- Get the current date and time, and use index [0] to extract the year, then convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_year.svg"> 
 
 ```python
 str(rtc.datetime()[0])
 ```
- 
-- Get the current date and time, and use index [0] to extract the year, then convert it to string format.
+<br><br>
 
+- Get the current date and time, and use index [1] to extract the month, then convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_month.svg"> 
 
 ```python
 str(rtc.datetime()[1])
 ```
 
-- Get the current date and time, and use index [1] to extract the month, then convert it to string format.
+
+ <br><br>
+- Get the current date and time, and use index [2] to extract the date, then convert it to string format.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_date.svg"> 
 
@@ -72,25 +74,28 @@ str(rtc.datetime()[1])
 str(rtc.datetime()[2])
 ```
 
-- Get the current date and time, and use index [2] to extract the date, then convert it to string format.
 
-
+ <br><br>
+- Get the current date and time, and use index [3] to extract the weekday, then convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_week.svg"> 
 
 ```python
 str(rtc.datetime()[3])
 ```
 
-- Get the current date and time, and use index [3] to extract the weekday, then convert it to string format.
 
 
+ <br><br>
+- Get the current date and time, and use index [4] to extract the hour, then convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_hour.svg"> 
 
 ```python
 str(rtc.datetime()[4])
 ```
 
-- Get the current date and time, and use index [4] to extract the hour, then convert it to string format.
+
+ <br><br>
+- Get the current date and time, and use index [5] to extract the minute, then convert it to string format.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_minute.svg"> 
 
@@ -98,17 +103,19 @@ str(rtc.datetime()[4])
 str(rtc.datetime()[5])
 ```
 
-- Get the current date and time, and use index [5] to extract the minute, then convert it to string format.
 
-
+ <br><br>
+- Get the current date and time, and use index [6] to extract the second, then convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_second.svg"> 
 
 ```python
 str(rtc.datetime()[6])
 ```
 
-- Get the current date and time, and use index [6] to extract the second, then convert it to string format.
 
+
+ <br><br>
+- Set the date and time with parameters (year, month, day, weekday, hour, minute, second, millisecond).
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_set_time.svg"> 
 
@@ -116,16 +123,18 @@ str(rtc.datetime()[6])
 rtc.datetime((0, 1, 1, 0, 0, 0, 0, 0))
 ```
 
-- Set the date and time with parameters (year, month, day, weekday, hour, minute, second, millisecond).
 
-
+ <br><br>
+- Get the current RTC (real-time clock) time and convert it to string format.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_get_real_time.svg"> 
 
 ```python
 str(rtc.datetime())
 ```
 
-- Get the current RTC (real-time clock) time and convert it to string format.
+
+ <br><br>
+- Return the current RTC time and convert it to string format.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/rtc/uiflow_block_rtc_print_real_time.svg"> 
 
@@ -133,4 +142,3 @@ str(rtc.datetime())
 str(rtc.printRTCtime())
 ```
 
-- Return the current RTC time and convert it to string format.
