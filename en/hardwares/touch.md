@@ -26,30 +26,34 @@ while True:
 ```
 
 ## API
-
+- Get the touch point coordinates on the screen for x and y axes (x: 0-320; y: 0-240).
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/touch/uiflow_block_touch_get_touch_coordinate.svg"> 
 
 ```python
 str(touch.read())
 ```
 
-- Get the touch point coordinates on the screen for x and y axes (x: 0-320; y: 0-240).
 
+<br><br>
+- Get the x-axis coordinate of the touch point on the screen (returns 0-320).
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/touch/uiflow_block_touch_get_touch_coordinate_x.svg"> 
 
 ```python
 str(touch.read()[0])
 ```
 
-- Get the x-axis coordinate of the touch point on the screen (returns 0-320).
 
+<br><br>
+- Get the y-axis coordinate of the touch point on the screen (returns 0-240).
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/touch/uiflow_block_touch_get_touch_coordinate_y.svg"> 
 
 ```python
 str(touch.read()[1])
 ```
 
-- Get the y-axis coordinate of the touch point on the screen (returns 0-240).
+
+<br><br>
+- Returns true or false; returns true if the screen is being touched, and false if it is not.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/touch/uiflow_block_touch_get_touch_press_status.svg"> 
 
@@ -57,4 +61,3 @@ str(touch.read()[1])
 str(touch.status())
 ```
 
-- Returns true or false; returns true if the screen is being touched, and false if it is not.
