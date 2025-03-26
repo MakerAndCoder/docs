@@ -13,6 +13,14 @@
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_data.svg">
 
 ```
+
+```
+
+<br><br>
+- uiflow_block_lorawan_initp2p
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_initp2p.svg">
+
+```python
 from MakerAndCoder import *
 from MakerAndCoder_ui import *
 from uiflow import *
@@ -25,14 +33,6 @@ screen.set_screen_bg_color(0xFFFFFF)
 lorawan0 = module.get(module.LORAWAN)
 
 lorawan0.initP2PMode(1)
-```
-
-<br><br>
-- uiflow_block_lorawan_initp2p
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_initp2p.svg">
-
-```python
-
 ```
 
 
