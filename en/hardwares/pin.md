@@ -30,50 +30,54 @@ while True:
 ```
 
 ## API
-
+- Set the direction of the pin.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pin/uiflow_block_pin_pinout.svg"> 
 
 ```python
 machine.Pin(0, mode=machine.Pin.IN, pull=machine.Pin.PULL_UP)
 ```
 
-- Set the direction of the pin.
+
 
   
-
+<br><br>
+- Set the pin to output high level.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pin/uiflow_block_pin_on.svg"> 
 
 ```python
 pin0.on()
 ```
  
-- Set the pin to output high level.
 
 
+<br><br>
+- Set the pin to output low level.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pin/uiflow_block_pin_off.svg"> 
 
 ```python
 pin0.off()
 ```
 
-- Set the pin to output low level.
 
 
+<br><br>
+- Set the value of the pin.
+  - "0": Low level
+  - "1": High level
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pin/uiflow_block_pin_set_value.svg"> 
 
 ```python
 pin0.value(0)
 ```
 
-- Set the value of the pin.
-  - "0": Low level
-  - "1": High level
 
 
+<br><br>
+- Get the value read from the pin.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/pin/uiflow_block_pin_get_value.svg"> 
 
 ```python
 str(pin0.value())
 ```
 
-- Get the value read from the pin.
+
