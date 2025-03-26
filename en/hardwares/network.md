@@ -25,11 +25,11 @@ print(wifiCfg.wlan_sta.isconnected())
 
 ### Example 2
 
-Download the Esptouch app on your phone, upload the program to the M5 device, and enter the Wi-Fi password in the Esptouch app. If the serial monitor shows a successful connection and displays the IP address, the device has successfully connected to Wi-Fi and will automatically connect to this Wi-Fi in the future.
+Download the Esptouch app on your phone, upload the program to the MC4.0 device, and enter the Wi-Fi password in the Esptouch app. If the serial monitor shows a successful connection and displays the IP address, the device has successfully connected to Wi-Fi and will automatically connect to this Wi-Fi in the future.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/network/uiflow_block_network_demo_smartconfig.svg"> 
 
-1. After uploading the program to the M5 device, enter the Wi-Fi password in the Esptouch app and click confirm.
+1. After uploading the program to the MC4.0 device, enter the Wi-Fi password in the Esptouch app and click confirm.
 
 <img alt="schematics" src="https://makerandcoder.com/MCLab/blockly/hardwares/network/uiflow_block_network_smartconfig_connect_wifi.png" width="20%" />
 
@@ -80,7 +80,7 @@ wifiCfg.doConnect('', '')
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/network/uiflow_block_network_p2p.svg"> 
 
 ```python
-M5Label('label0', x=193, y=67, color=0x000, font=FONT_MONT_14, parent=None)
+sendP2PData('', '')
 ```
 <br /><br />
 
