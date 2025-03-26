@@ -19,7 +19,7 @@ screen.set_screen_bg_color(0xFFFFFF)
 sdcard.SDCard(20000000)
 with open('/sd/test.txt', 'w+') as fs:
   fs.write('Hello World')
-with open('/sd/test.txt', 'r') as fs:
+with open('/sd/', 'r') as fs:
   print(fs.read())
 ```
 
