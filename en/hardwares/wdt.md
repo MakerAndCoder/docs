@@ -28,15 +28,16 @@ while True:
 ```
 
 #### API
-
+- Initialize Watch Dog Timer and set the timeout period
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/wdt/uiflow_block_wdt_init.svg"> 
 
 ```python
 wdt = WDT(timeout=2000)
 ```
 
-- Initialize Watch Dog Timer and set the timeout period
 
+<br><br>
+- Repeat the feed operation within the timeout period to refresh, and reset the device if the timeout period is too long for the feed.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/wdt/uiflow_block_wdt_feed.svg"> 
 
 
@@ -44,5 +45,5 @@ wdt = WDT(timeout=2000)
 wdt.feed()
 ```
 
-- Repeat the feed operation within the timeout period to refresh, and reset the device if the timeout period is too long for the feed.
+
 
