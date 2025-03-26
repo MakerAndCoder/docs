@@ -16,9 +16,6 @@ screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
-label0 = MCLabel('label0', x=39, y=49, color=0x000, font=FONT_MONT_14, parent=None)
-label1 = MCLabel('label1', x=209, y=49, color=0x000, font=FONT_MONT_14, parent=None)
-
 sdcard.SDCard(20000000)
 with open('/sd/test.txt', 'w+') as fs:
   fs.write('Hello World')
