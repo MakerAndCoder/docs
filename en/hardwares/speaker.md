@@ -25,25 +25,28 @@ speaker.tone(1800, 200)
 ```
 
 ### API
-
+- Setting the playback sound frequency and duration
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker.svg"> 
 
 ```python
 speaker.tone(1800, 200)
 ```
 
-- Setting the playback sound frequency and duration
 
 
+<br><br>
+- Setting the Playback Volume
+  - Volume range: 0-100
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker_volume.svg"> 
 
 ```python
 speaker.setVolume(1)
 ```
 
-- Setting the Playback Volume
-  - Volume range: 0-100
 
+
+<br><br>
+- Play the specified tone and beat
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_speaker_tone.svg"> 
 
@@ -51,7 +54,6 @@ speaker.setVolume(1)
 speaker.sing(220, 1)
 ```
 
-- Play the specified tone and beat
 
 
 ## Speaker For MC4.0
@@ -75,7 +77,7 @@ speaker.playTone(554, 1, volume=6)
 speaker.playTone(554, 1, volume=6)
 ```
 
-
+<br><br>
 - Control playback of local wav files
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_example.svg"> 
@@ -98,7 +100,8 @@ speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=sp
 
 ### API
 
-
+- Play the specified tone (frequency) and set the playback volume.
+  - Volume range: 0-6
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_freq.svg"> 
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_tone.svg"> 
@@ -108,25 +111,27 @@ speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=sp
 speaker.playTone(554, 1, volume=6)
 ```
 
-- Play the specified tone (frequency) and set the playback volume.
-  - Volume range: 0-6
 
+<br><br>
+- Play wav files in the local file system, and set the playback volume.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_wav_file.svg"> 
 
 ```python
 speaker.playWAV("res/ding.wav", volume=6)
 ```
 
-- Play wav files in the local file system, and set the playback volume.
 
+<br><br>
+- Play the wav file in the local file system `res/filename.wav` or SD card `/sd/filename.wav`, and specify the sample rate and audio data format and channel at the same time.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_local_wav_file_path.svg"> 
 
 ```python
 speaker.playWAV('res/ding.wav', rate=44100, data_format=speaker.F16B, channel=speaker.CHN_LR, volume=6)
 ```
 
-- Play the wav file in the local file system `res/filename.wav` or SD card `/sd/filename.wav`, and specify the sample rate and audio data format and channel at the same time.
 
+<br><br>
+- Provide an interface to upload wav files to the device in online programming mode, click the + sign to upload operation.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_upload_wav_file.svg"> 
 
 ```python
@@ -134,17 +139,18 @@ speaker.playWAV("res/ding.wav", volume=0)
 ```
 
 
-- Provide an interface to upload wav files to the device in online programming mode, click the + sign to upload operation.
 
 
+<br><br>
+- Fill in the URL to play the wav file in the cloud
+
+#>Note: | Only WAV type files are supported with a maximum size of 500KB, to prevent the file from being too large, it is recommended to use 16000 sampling frequency, 16 Bit WAV files.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_url_wav_file.svg"> 
 
 ```python
 speaker.playCloudWAV('https://xxxxx.wav', volume=6)
 ```
 
-- Fill in the URL to play the wav file in the cloud
 
-#>Note: | Only WAV type files are supported with a maximum size of 500KB, to prevent the file from being too large, it is recommended to use 16000 sampling frequency, 16 Bit WAV files.
 
 
