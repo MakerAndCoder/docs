@@ -145,6 +145,7 @@ speaker.playWAV("res/ding.wav", volume=0)
 - Fill in the URL to play the wav file in the cloud
 
 #>Note: | Only WAV type files are supported with a maximum size of 500KB, to prevent the file from being too large, it is recommended to use 16000 sampling frequency, 16 Bit WAV files.
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/speaker/uiflow_block_core2_speaker_play_url_wav_file.svg"> 
 
 ```python
