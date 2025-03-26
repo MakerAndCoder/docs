@@ -66,7 +66,18 @@ lorawan0.initRxMode(lorawan0_cb)
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_txt.svg">
 
 ```python
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
+from uiflow import *
+import module
 
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+
+lorawan0 = module.get(module.LORAWAN)
+
+lorawan0.txStr('')
 ```
 
 
