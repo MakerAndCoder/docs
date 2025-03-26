@@ -12,7 +12,7 @@
 - uiflow_block_lorawan_data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_data.svg">
 
-```
+```python
 
 ```
 
