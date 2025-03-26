@@ -33,70 +33,77 @@ while True:
 
 
 ## API
-
+- Getting the roll-over data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_x.svg"> 
 
 ```python
 imu0.ypr[1]
 ```
 
-- Getting the roll-over data
 
 
+<br><br>
+- Getting pitch data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_y.svg"> 
 
 ```python
 imu0.ypr[2]
 ```
 
-- Getting pitch data
 
+<br><br>
+- Getting X-axis acceleration data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_x_acc.svg"> 
 
 ```python
 imu0.acceleration[0]
 ```
 
-- Getting X-axis acceleration data
 
+<br><br>
+- Get Y-axis acceleration data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_y_acc.svg"> 
 
 ```python
 imu0.acceleration[1]
 ```
 
-- Get Y-axis acceleration data
 
+<br><br>
+- Getting Z-axis acceleration data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_z_acc.svg"> 
 
 ```python
 imu0.acceleration[2]
 ```
 
-- Getting Z-axis acceleration data
 
+<br><br>
+- Get angular velocity in X direction
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_x_gyr.svg"> 
 
 ```python
 imu0.gyro[0]
 ```
 
-- Get angular velocity in X direction
 
 
+<br><br>
+- Get the angular velocity in the Y direction
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_y_gyr.svg"> 
 
 ```python
 imu0.gyro[1]
 ```
 
-- Get the angular velocity in the Y direction
 
 
+<br><br>
+- Get angular velocity in Z direction
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/imu/uiflow_block_imu_get_z_gyr.svg"> 
 
 ```python
 imu0.gyro[2]
 ```
 
-- Get angular velocity in Z direction
+
