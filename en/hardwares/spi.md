@@ -12,14 +12,14 @@ spi2 = machine.SPI(1, 500000, sck=machine.Pin(-1), miso=machine.Pin(-1), mosi=ma
 
   
 <br><br>
-- Send data from the buffer `buf` through the SPI interface.
+- Deinitialize the SPI interface, stop its operation, and release related resources.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/spi/uiflow_block_spi_deinit.svg"> 
 
 ```python
 spi2.deinit()
 ```
  
-- Deinitialize the SPI interface, stop its operation, and release related resources.
+
 <br><br>
 - Send data from the buffer `buf` through the SPI interface.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/spi/uiflow_block_spi_write.svg"> 
