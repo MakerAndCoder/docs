@@ -4,7 +4,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_example.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_example.svg">
 
 ```python
 from MakerAndCoder import *
@@ -82,7 +82,7 @@ while True:
 
 ## API
 - Initializing Azure IoT Central client information
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_central.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_central.svg">
 
 ```python
 from IoTcloud.Azure import IoT_Central
@@ -91,7 +91,7 @@ azure = IoT_Central(scope_id='', device_id='', device_key='')
 
 <br><br>
 - Initializing Azure IoT Hub client information
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_iothub.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_iothub.svg">
 
 ```python
 from IoTcloud.Azure import IoT_Hub
@@ -100,7 +100,7 @@ azure = IoT_Hub(connection_string='')
 
 <br><br>
 - Start client connect
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_start.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_start.svg">
 
 ```python
 azure.start()
@@ -109,7 +109,7 @@ azure.start()
 
 <br><br>
 - publish messages
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_publish.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_publish.svg">
 
 ```python
 azure.publish_D2C_message(str(''))
@@ -118,7 +118,7 @@ azure.publish_D2C_message(str(''))
 
 <br><br>
 - subscribe messages
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub.svg">
 
 ```python
 def azure_C2D_cb(msg_data):
@@ -132,7 +132,7 @@ azure.subscribe_C2D_message(azure_C2D_cb)
 
 <br><br>
 - report device twin properties
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_retrieve_twin_property.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_retrieve_twin_property.svg">
 
 ```python
 azure.update_twin_reported_properties(key1='value',key2='value')
@@ -142,7 +142,7 @@ azure.update_twin_reported_properties(key1='value',key2='value')
 
 <br><br>
 - subscribe direct_method messages 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_direct.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_direct.svg">
 
 ```python
 def azure_direct_fun(payload, rid):
@@ -156,7 +156,7 @@ def azure_direct_fun(payload, rid):
 
 <br><br>
 - desired device twin callback
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_twin_desired.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_twin_desired.svg">
 
 ```python
 def azure_desired_cb(payload):
@@ -168,7 +168,7 @@ azure.subscribe_twin_desired_response(azure_desired_cb)
 
 <br><br>
 - retrieve device twin properties
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_update_property.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_classic/uiflow_block_azure_update_property.svg">
 
 ```python
 azure.retrieve_twin_properties()
