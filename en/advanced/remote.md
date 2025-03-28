@@ -34,21 +34,22 @@ lcd.qrcode('http://flow-remote.m5stack.com/?remote=undefined', 72, 32, 176)
 
 ## API
 
-
+- Set the display position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be automatically updated, so the API needs to be run once through UIFlow online mode.
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_set_qrcode.svg">
 
 ```python
 lcd.qrcode('http://flow-remote.m5stack.com/?remote=undefined', 72, 32, 176)
 ```
-
-- Set the display position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be automatically updated, so the API needs to be run once through UIFlow online mode.
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_set_title.svg">
-
+<br><br>
 - Set the remote web page title
 
 #>Control Variables | Except for the button control, all other controls involving input parameters need to click the gear button in the upper left corner of the block to add variables before use, and then use variables with the same name to get the incoming parameters inside their programs.
 
+<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_set_title.svg">
+
+
+<br><br>
+- Add toggle switch control
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_add_switch.svg">
 
 ```python
@@ -56,8 +57,9 @@ def _remote_SwitchName(x):
   pass
 ```
 
-- Add toggle switch control
 
+<br><br>
+- Adding Key Controls
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_add_button.svg">
 
 ```python
@@ -65,8 +67,9 @@ def _remote_ButtonName():
   pass
 ```
 
-- Adding Key Controls
 
+<br><br>
+- Adding Slider Controls
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_add_slider.svg">
 
 ```python
@@ -74,8 +77,9 @@ def _remote_SliderName(x):
   pass
 ```
 
-- Adding Slider Controls
 
+<br><br>
+- Adding Label Display Controls
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_add_label.svg">
 
 ```python
@@ -83,8 +87,9 @@ def _remote_LabelName(x):
   pass
 ```
 
-- Adding Label Display Controls
 
+<br><br>
+- Adding Text Input Controls
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/advanced/remote/uiflow_block_remote_add_input.svg">
 
 ```python
@@ -92,5 +97,5 @@ def _remote_InputName(x):
   pass
 ```
 
-- Adding Text Input Controls
+
 
