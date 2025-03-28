@@ -7,18 +7,18 @@
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_example.svg">
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 from IoTcloud.Azure import IoT_Hub
 import json
-
 import time
 import unit
 
-setScreenColor(0xffffff)
-env21 = unit.get(unit.ENV2, unit.PORTA)
-rgb1 = unit.get(unit.RGB, unit.PORTB)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+env3_0 = unit.get(unit.ENV3, unit.PORTA)
 
 msg = None
 fun_msg = None
@@ -27,33 +27,28 @@ status = None
 humid_data = None
 temp_data = None
 
-label0 = M5TextBox(13, 161, "Text", lcd.FONT_Default, 0x000000, rotate=0)
-label1 = M5TextBox(0, 56, "Temp:", lcd.FONT_UNICODE, 0x000000, rotate=0)
-label2 = M5TextBox(146, 56, "Humid:", lcd.FONT_UNICODE, 0x000000, rotate=0)
-label3 = M5TextBox(80, 63, "Text", lcd.FONT_Default, 0x000000, rotate=0)
-label4 = M5TextBox(230, 63, "Text", lcd.FONT_Default, 0x000000, rotate=0)
-label5 = M5TextBox(0, 129, "Receive messages:", lcd.FONT_UNICODE, 0x000000, rotate=0)
-label6 = M5TextBox(0, 95, "RGB:", lcd.FONT_UNICODE, 0x000000, rotate=0)
-label7 = M5TextBox(80, 102, "Text", lcd.FONT_Default, 0x000000, rotate=0)
-label8 = M5TextBox(55, 10, "UIFlow Azure IoT", lcd.FONT_UNICODE, 0x000000, rotate=0)
+label0 = MCLabel('label0', x=27, y=53, color=0x000, font=FONT_MONT_14, parent=None)
+label3 = MCLabel('label1', x=128, y=40, color=0x000, font=FONT_MONT_14, parent=None)
+label7 = MCLabel('label1', x=147, y=90, color=0x000, font=FONT_MONT_14, parent=None)
+label4 = MCLabel('label1', x=219, y=53, color=0x000, font=FONT_MONT_14, parent=None)
 
 def azure_desired_cb(payload):
   global msg, fun_msg, data, status, humid_data, temp_data
   msg = payload
-  label0.setText(str(msg))
+  label0.set_text(str(msg))
 
 def azure_direct_rgb(payload, rid):
   global msg, fun_msg, data, status, humid_data, temp_data
   fun_msg = payload
-  label0.setText(str(fun_msg))
+  label0.set_text(str(fun_msg))
   if '"ON"' == fun_msg:
-    label7.setText('ON')
-    rgb1.setColorAll(0xffffff)
+    label7.set_text('ON')
+    rgb.setColorAll(0xffffff)
     azure.update_twin_reported_properties(rgb='ON')
     status = 204
   elif '"OFF"' == fun_msg:
-    label7.setText('OFF')
-    rgb1.setColorAll(0x000000)
+    label7.set_text('OFF')
+    rgb.setColorAll(0x000000)
     azure.update_twin_reported_properties(rgb='OFF')
     status = 204
   else:
@@ -64,20 +59,20 @@ def azure_direct_rgb(payload, rid):
 def azure_C2D_cb(msg_data):
   global msg, fun_msg, data, status, humid_data, temp_data
   msg = msg_data
-  label0.setText(str(msg))
+  label0.set_text(str(msg))
   pass
 
-azure = IoT_Hub(connection_string='HostName=m5stack-iot.azure-devices.net;DeviceId=m5stack-uiflow;SharedAccessKey=9CpxoulAHSDX+wP2IlehvtDo3AYHNGNKpcDrVpQQVIo=')
+azure = IoT_Hub(connection_string='HostName=MC4.0-iot.azure-devices.net;DeviceId=…')
 azure.subscribe_twin_desired_response(azure_desired_cb)
 azure.subscribe_direct_method('rgb', azure_direct_rgb)
 azure.subscribe_C2D_message(azure_C2D_cb)
 azure.start()
-label0.setText(str(azure.retrieve_twin_properties()))
+label0.set_text(str(azure.retrieve_twin_properties()))
 while True:
-  humid_data = env21.humidity
-  temp_data = env21.temperature
-  label3.setText(str(temp_data))
-  label4.setText(str(humid_data))
+  humid_data = env3_0.humidity
+  temp_data = env3_0.temperature
+  label3.set_text(str(temp_data))
+  label4.set_text(str(humid_data))
   data = {temp:temp_data,humid:humid_data}
   azure.publish_D2C_message(str((json.dumps(data))))
   wait(5)
@@ -86,7 +81,7 @@ while True:
 
 
 ## API
-
+- Initializing Azure IoT Central client information
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_central.svg">
 
 ```python
@@ -94,8 +89,8 @@ from IoTcloud.Azure import IoT_Central
 azure = IoT_Central(scope_id='', device_id='', device_key='')
 ```
 
-- Initializing Azure IoT Central client information
-
+<br><br>
+- Initializing Azure IoT Hub client information
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_init_iothub.svg">
 
 ```python
@@ -103,24 +98,26 @@ from IoTcloud.Azure import IoT_Hub
 azure = IoT_Hub(connection_string='')
 ```
 
-- Initializing Azure IoT Hub client information
-
+<br><br>
+- Start client connect
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_start.svg">
 
 ```python
 azure.start()
 ```
 
-- Start client connect
 
+<br><br>
+- publish messages
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_publish.svg">
 
 ```python
 azure.publish_D2C_message(str(''))
 ```
 
-- publish messages
 
+<br><br>
+- subscribe messages
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub.svg">
 
 ```python
@@ -131,18 +128,20 @@ def azure_C2D_cb(msg_data):
 azure.subscribe_C2D_message(azure_C2D_cb)
 ```
 
-- subscribe messages
 
 
+<br><br>
+- report device twin properties
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_retrieve_twin_property.svg">
 
 ```python
 azure.update_twin_reported_properties(key1='value',key2='value')
 ```
 
-- report device twin properties
 
 
+<br><br>
+- subscribe direct_method messages 
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_direct.svg">
 
 ```python
@@ -154,8 +153,9 @@ def azure_direct_fun(payload, rid):
 
 ```
 
-- subscribe direct_method messages 
 
+<br><br>
+- desired device twin callback
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_sub_twin_desired.svg">
 
 ```python
@@ -165,13 +165,14 @@ def azure_desired_cb(payload):
 azure.subscribe_twin_desired_response(azure_desired_cb)
 ```
 
-- desired device twin callback
 
+<br><br>
+- retrieve device twin properties
 <img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/iot_cloud/azure_classic/uiflow_block_azure_update_property.svg">
 
 ```python
 azure.retrieve_twin_properties()
 ```
 
-- retrieve device twin properties
+
 
