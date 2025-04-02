@@ -58,6 +58,9 @@ while True:
 
 
 ## API
+- Set the position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be updated automatically, so this API needs to be run once through UIFlow online mode first.
+
+- In the program block menu, click Remote+ function, a preview window will appear on the right side of the page for adding controls, users can drag and drop to add controls to the blank space of the page. After all controls have been configured and the program has been pushed, click on the QR code at the top of the preview window to get a link to the control page.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remoteplus_set_qrcode.svg">
 
@@ -65,12 +68,10 @@ while True:
 lcd.qrcode('https://flow.m5stack.com/remote?id=undefined', 72, 32, 176)
 ```
 
-- Set the position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be updated automatically, so this API needs to be run once through UIFlow online mode first.
-
-- In the program block menu, click Remote+ function, a preview window will appear on the right side of the page for adding controls, users can drag and drop to add controls to the blank space of the page. After all controls have been configured and the program has been pushed, click on the QR code at the top of the preview window to get a link to the control page.
 
 
 ## Button
+- Add a touch button to the control page, every time you add a button, a corresponding Callback function will be automatically generated in the programming area, and the contents of the function will be triggered when the button is pressed.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_button.svg">
 
@@ -79,7 +80,6 @@ def button_1_callback():
   pass
 ```
 
-- Add a touch button to the control page, every time you add a button, a corresponding Callback function will be automatically generated in the programming area, and the contents of the function will be triggered when the button is pressed.
 
 
 | Properties | Description                                      |
@@ -93,7 +93,7 @@ def button_1_callback():
 
 
 ## Switch
-
+- Add a toggle switch to the control page, every time you add a toggle switch, a corresponding callback function will be generated automatically in the programming area, the content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. The content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. switch_value: 1(ON)/0(OFF)
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_switch.svg">
 
 ```python
@@ -101,7 +101,7 @@ def switch_1_callback(switch_value):
   print(switch_value)
 ```
 
-- Add a toggle switch to the control page, every time you add a toggle switch, a corresponding callback function will be generated automatically in the programming area, the content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. The content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. switch_value: 1(ON)/0(OFF)
+
 
 
 | Properties     | Description                                      |
@@ -117,6 +117,7 @@ def switch_1_callback(switch_value):
 
 
 ## Slider
+- Add a slider to the control page, every time a slider is added, a corresponding callback function will be generated in the program area, the slider action will trigger the content of the function and pass the switch state through the variable `slider_value`. slider_value: can be configured through the Properties. The slider action will trigger the content of the callback function and pass the slider position status through the variable `slider_value`. slider_value: Configurable value range through Properties.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_slider.svg">
 
@@ -126,7 +127,6 @@ def slider_1_callback(slider_value):
   print(slider_value)
 ```
 
-- Add a slider to the control page, every time a slider is added, a corresponding callback function will be generated in the program area, the slider action will trigger the content of the function and pass the switch state through the variable `slider_value`. slider_value: can be configured through the Properties. The slider action will trigger the content of the callback function and pass the slider position status through the variable `slider_value`. slider_value: Configurable value range through Properties.
 
 
 | Properties | Description                                             |
@@ -139,7 +139,7 @@ def slider_1_callback(slider_value):
 | Max Value  | Slider Range Maximum                                    |
 
 ## Stepper
-
+- Add a Stepper to the control page, every time a slider is added, a corresponding Callback function will be automatically generated in the programming area, the content of the function will be triggered when the Stepper moves, and the current value state will be passed through the variable `stepper_value`.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_stepper.svg">
 
 ```python
@@ -148,7 +148,7 @@ def stepper_1_callback(stepper_value):
   print(stepper_value)
 ```
 
-- Add a Stepper to the control page, every time a slider is added, a corresponding Callback function will be automatically generated in the programming area, the content of the function will be triggered when the Stepper moves, and the current value state will be passed through the variable `stepper_value`.
+
 
 
 | Properties | Description                                      |
@@ -161,6 +161,7 @@ def stepper_1_callback(stepper_value):
 
 ## Label
 
+- Add a display tag to the control page, every add a display tag, in the programming area will automatically generate a corresponding Event timer function, the device program will automatically run according to the specified interval to upload data content (default interval is 3000ms), the uploaded content will be automatically updated to display on the page control.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_label.svg">
 
@@ -171,7 +172,6 @@ def label_1_callback():
   return rp_label1_data
 ```
 
-- Add a display tag to the control page, every add a display tag, in the programming area will automatically generate a corresponding Event timer function, the device program will automatically run according to the specified interval to upload data content (default interval is 3000ms), the uploaded content will be automatically updated to display on the page control.
 
 
 | Properties   | Description                                      |
@@ -183,6 +183,7 @@ def label_1_callback():
 | Interval(ms) | Data reporting interval/ms                       |
 
 ## Joystick
+- Add a joystick control to the control page, every time a joystick control is added, a corresponding callback function will be automatically generated in the programming area, when the joystick control moves, it will trigger the execution of the function and pass the current joystick state through the variables `joystick_x_value` and `joystick_y_value`.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_joystick.svg">
 
@@ -192,7 +193,6 @@ def joystick_1_callback(joystick_x_value, joystick_y_value):
   print(joystick_x_value)
 ```
 
-- Add a joystick control to the control page, every time a joystick control is added, a corresponding callback function will be automatically generated in the programming area, when the joystick control moves, it will trigger the execution of the function and pass the current joystick state through the variables `joystick_x_value` and `joystick_y_value`.
 
 
 | Properties  | Description                                                                                 |
@@ -207,6 +207,7 @@ def joystick_1_callback(joystick_x_value, joystick_y_value):
 | Y Max       | Maximum Y-axis position value                                                               |
 
 ## Input
+- Add an input text box to the control page, every time you add an input text box, a corresponding callback function will be automatically generated in the programming area, when the text of the input box is changed, it will trigger the execution of the function and pass the input text through the variable `input_value`.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_input.svg">
 
@@ -216,7 +217,6 @@ def input_1_callback(input_value):
   print(input_value)
 ```
 
-- Add an input text box to the control page, every time you add an input text box, a corresponding callback function will be automatically generated in the programming area, when the text of the input box is changed, it will trigger the execution of the function and pass the input text through the variable `input_value`.
 
 
 | Properties      | Description                                      |
@@ -230,7 +230,7 @@ def input_1_callback(input_value):
 
 
 ## Image
-
+- Add an image control to the control page. When the control page is accessed, the page will fetch the image data from the specified URL at the specified interval (the default interval is 3000ms) and update it to be displayed on the page control.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_image.svg">
 
 ```python
@@ -239,7 +239,7 @@ def image_1_callback():
   return rp_img1_url
 ```
 
-- Add an image control to the control page. When the control page is accessed, the page will fetch the image data from the specified URL at the specified interval (the default interval is 3000ms) and update it to be displayed on the page control.
+
 
 | Properties   | Description                                      |
 | ------------ | ------------------------------------------------ |
@@ -250,7 +250,7 @@ def image_1_callback():
 
 
 ## Gauge
-
+- Add a dashboard to the control page, each dashboard will automatically generate a corresponding Event timer function in the programming area, the device program will automatically upload the data content according to the specified interval (the default interval is 3000ms), and the uploaded content will be automatically updated and displayed on the page control.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_gauge.svg">
 
 ```python
@@ -259,7 +259,7 @@ def gauge_1_callback():
   return rp_gauge1_data
 ```
 
-- Add a dashboard to the control page, each dashboard will automatically generate a corresponding Event timer function in the programming area, the device program will automatically upload the data content according to the specified interval (the default interval is 3000ms), and the uploaded content will be automatically updated and displayed on the page control.
+
 
 
 | Properties   | Description                                      |
