@@ -8,6 +8,8 @@
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/azure_iot/uiflow_block_azure_pnp_init_central.svg">
 
 ```python
+from IoTcloud.Azure import IoT_Central
+
 azurepnp = IoT_Central(scope_id='', device_id='', device_key='', model_id='dtmi:m5stack:pnpdevice:n3zte8m;1')
 azurepnp.start()
 ```
