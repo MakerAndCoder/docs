@@ -1,13 +1,5 @@
 # Module LoRaWAN P2P
 
-## Example
-
-<img class="blockly_svg" src="example.svg">
-
-```python
-
-```
-
 ## API
 - uiflow_block_lorawan_data
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/lorawan_p2p/uiflow_block_lorawan_data.svg">
