@@ -1,11 +1,11 @@
-# Remote+
+# MC Cloud
 
-#>Introduction|Create a web page of controls for remote control of MC4.0 devices with Remote+. This feature provides more controls than the old Remote and supports Ezdata data linkage, making it more powerful. This page is associated with the device's API KEY and will be stored in MC4.0 service for a long time, and provides a fixed access link so that users can access and share the device information or control the device remotely anytime and anywhere. <br>**Note:<br>1. This function needs to use the online version of MCLab<br>2. When downloading and running offline, you need to add WiFi connection program to setup.[View WiFi Connection Program Instructions](/en/uiflow/blockly/hardwares/network)<br>3. You need to push the program before using it. Then only you can get the QR code/URL of the access page**
+#>Introduction|Create a web page of controls for remote control of MC4.0 devices with MC Cloud. This feature provides more controls and supports Ezdata data linkage, making it more powerful. This page is associated with the device's API KEY and will be stored in MC4.0 service for a long time, and provides a fixed access link so that users can access and share the device information or control the device remotely anytime and anywhere. <br>**Note:<br>1. This function needs to use the online version of MCLab<br>2. When downloading and running offline, you need to add WiFi connection program to setup.[View WiFi Connection Program Instructions](/en/uiflow/blockly/hardwares/network)<br>3. You need to push the program before using it. Then only you can get the QR code/URL of the access page**
 
 
 ## Example
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_example.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_example.svg">
 
 ```python
 from MakerAndCoder import *
@@ -52,9 +52,9 @@ while True:
   wait_ms(2)
 ```
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_example_monitor_01.jpg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_example_monitor_01.jpg">
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_example_monitor_02.jpg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_example_monitor_02.jpg">
 
 
 ## API
@@ -62,7 +62,7 @@ while True:
 
 - In the program block menu, click Remote+ function, a preview window will appear on the right side of the page for adding controls, users can drag and drop to add controls to the blank space of the page. After all controls have been configured and the program has been pushed, click on the QR code at the top of the preview window to get a link to the control page.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remoteplus_set_qrcode.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remoteplus_set_qrcode.svg">
 
 ```python
 lcd.qrcode('http://mclab.ai/remote?id=undefined', 72, 32, 176)
@@ -73,7 +73,7 @@ lcd.qrcode('http://mclab.ai/remote?id=undefined', 72, 32, 176)
 ## Button
 - Add a touch button to the control page, every time you add a button, a corresponding Callback function will be automatically generated in the programming area, and the contents of the function will be triggered when the button is pressed.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_button.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_button.svg">
 
 ```python
 def button_1_callback():
@@ -94,7 +94,7 @@ def button_1_callback():
 
 ## Switch
 - Add a toggle switch to the control page, every time you add a toggle switch, a corresponding callback function will be generated automatically in the programming area, the content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. The content of the function will be triggered when the switch is activated, and the switch state will be passed through the variable `switch_value`. switch_value: 1(ON)/0(OFF)
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_switch.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_switch.svg">
 
 ```python
 def switch_1_callback(switch_value):
@@ -119,7 +119,7 @@ def switch_1_callback(switch_value):
 ## Slider
 - Add a slider to the control page, every time a slider is added, a corresponding callback function will be generated in the program area, the slider action will trigger the content of the function and pass the switch state through the variable `slider_value`. slider_value: can be configured through the Properties. The slider action will trigger the content of the callback function and pass the slider position status through the variable `slider_value`. slider_value: Configurable value range through Properties.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_slider.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_slider.svg">
 
 
 ```python
@@ -140,7 +140,7 @@ def slider_1_callback(slider_value):
 
 ## Stepper
 - Add a Stepper to the control page, every time a slider is added, a corresponding Callback function will be automatically generated in the programming area, the content of the function will be triggered when the Stepper moves, and the current value state will be passed through the variable `stepper_value`.
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_stepper.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_stepper.svg">
 
 ```python
 
@@ -163,7 +163,7 @@ def stepper_1_callback(stepper_value):
 
 - Add a display tag to the control page, every add a display tag, in the programming area will automatically generate a corresponding Event timer function, the device program will automatically run according to the specified interval to upload data content (default interval is 3000ms), the uploaded content will be automatically updated to display on the page control.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_label.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_label.svg">
 
 
 ```python
@@ -185,7 +185,7 @@ def label_1_callback():
 ## Joystick
 - Add a joystick control to the control page, every time a joystick control is added, a corresponding callback function will be automatically generated in the programming area, when the joystick control moves, it will trigger the execution of the function and pass the current joystick state through the variables `joystick_x_value` and `joystick_y_value`.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_joystick.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_joystick.svg">
 
 ```python
 def joystick_1_callback(joystick_x_value, joystick_y_value):
@@ -209,7 +209,7 @@ def joystick_1_callback(joystick_x_value, joystick_y_value):
 ## Input
 - Add an input text box to the control page, every time you add an input text box, a corresponding callback function will be automatically generated in the programming area, when the text of the input box is changed, it will trigger the execution of the function and pass the input text through the variable `input_value`.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_input.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_input.svg">
 
 
 ```python
@@ -231,7 +231,7 @@ def input_1_callback(input_value):
 
 ## Image
 - Add an image control to the control page. When the control page is accessed, the page will fetch the image data from the specified URL at the specified interval (the default interval is 3000ms) and update it to be displayed on the page control.
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_image.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_image.svg">
 
 ```python
 def image_1_callback():
@@ -251,7 +251,7 @@ def image_1_callback():
 
 ## Gauge
 - Add a dashboard to the control page, each dashboard will automatically generate a corresponding Event timer function in the programming area, the device program will automatically upload the data content according to the specified interval (the default interval is 3000ms), and the uploaded content will be automatically updated and displayed on the page control.
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remote_plus_gauge.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/MC_cloud/uiflow_block_remote_plus_gauge.svg">
 
 ```python
 def gauge_1_callback():
