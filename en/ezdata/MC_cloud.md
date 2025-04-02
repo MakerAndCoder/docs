@@ -1,6 +1,6 @@
 # MC Cloud
 
-#>Introduction|Create a web page of controls for remote control of MC4.0 devices with MC Cloud. This feature provides more controls and supports Ezdata data linkage, making it more powerful. This page is associated with the device's API KEY and will be stored in MC4.0 service for a long time, and provides a fixed access link so that users can access and share the device information or control the device remotely anytime and anywhere. <br>**Note:<br>1. This function needs to use the online version of MCLab<br>2. When downloading and running offline, you need to add WiFi connection program to setup.[View WiFi Connection Program Instructions](/en/hardwares/network)<br>3. You need to push the program before using it. Then only you can get the QR code/URL of the access page**
+#>Introduction|Create a web page of controls for remote control of MC4.0 devices with MC Cloud. This feature provides more controls and supports Ezdata data linkage, making it more powerful. This page is associated with the device's API KEY and will be stored in MC4.0 service for a long time, and provides a fixed access link so that users can access and share the device information or control the device remotely anytime and anywhere. <br>**Note:<br>1. This function needs to use the online version of MCLab<br>2. When downloading and running offline, you need to add WiFi connection program to setup.[View WiFi Connection Program Instructions](/en/hardwares/network.md)<br>3. You need to push the program before using it. Then only you can get the QR code/URL of the access page**
 
 
 ## Example
@@ -275,9 +275,9 @@ def gauge_1_callback():
 
 ## Chart
 
-Add a chart to the control page, the icon needs to specify the data source via [Ezdata function](/en/uiflow/blockly/ezdata/ezdata), and it supports to configure the chart refresh interval and the basic style.
+Add a chart to the control page, the icon needs to specify the data source via [Ezdata function](/en/ezdata/ezdata.md), and it supports to configure the chart refresh interval and the basic style.
 
-#>Precautions:|[1. Click here to understand the basic use of Ezdata before using it](/en/uiflow/blockly/ezdata/ezdata)<br>2. Ezdata is used in conjunction with Chart, and needs to be used in a way that the data is saved as a `List`, `Not a Topic`<br>3. When you pass data, you need to use a `map` (`map`), which is a map of the data to be used. You need to use `map` (dictionary) to pass data in the form of `key-value`. The key needs to correspond to the X, Y Data Source field in the chart control, if it is left empty, the data will not be displayed.
+#>Precautions:|[1. Click here to understand the basic use of Ezdata before using it](/en/ezdata/ezdata.md)<br>2. Ezdata is used in conjunction with Chart, and needs to be used in a way that the data is saved as a `List`, `Not a Topic`<br>3. When you pass data, you need to use a `map` (`map`), which is a map of the data to be used. You need to use `map` (dictionary) to pass data in the form of `key-value`. The key needs to correspond to the X, Y Data Source field in the chart control, if it is left empty, the data will not be displayed.
 
 
 | Properties          | Description                                                                                                                           |
