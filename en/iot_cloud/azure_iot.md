@@ -2,13 +2,6 @@
 
 # Azure IoT
 
-## Example
-
-<img class="blockly_svg" src="example.svg">
-
-```python
-
-```
 
 ## API
 - uiflow_block_azure_pnp_init_central
