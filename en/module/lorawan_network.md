@@ -1,12 +1,5 @@
 # Module LoRaWAN Network
 
-## Example
-
-<img class="blockly_svg" src="example.svg">
-
-```python
-
-```
 
 ## API
 - uiflow_block_lorawan_network_del_channel_frequency
