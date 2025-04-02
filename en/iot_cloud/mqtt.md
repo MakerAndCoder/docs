@@ -45,7 +45,7 @@ while True:
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/mqtt/uiflow_block_mqtt_set_client.svg"> 
 
 ```python
-m5mqtt = M5mqtt('id_123456', 'broker.emqx.io', 1883, 'user_123456', 'pwd_123456', 20)
+mcmqtt = MCmqtt('id_123456', 'broker.emqx.io', 1883, 'user_123456', 'pwd_123456', 20)
 
 ```
 
@@ -55,14 +55,14 @@ m5mqtt = M5mqtt('id_123456', 'broker.emqx.io', 1883, 'user_123456', 'pwd_123456'
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/mqtt/uiflow_block_mqtt_set_client_ssl.svg"> 
 
 ```python
-m5mqtt = M5mqtt('id_123456', 'broker.emqx.io', 1883, 'user_123456', 'pwd_123456', 20, ssl = True, ssl_params = {'key': "/flash/res/certificate.pem.crt", 'cert': "/flash/res/private.pem.key"})
+mcmqtt = MCmqtt('id_123456', 'broker.emqx.io', 1883, 'user_123456', 'pwd_123456', 20, ssl = True, ssl_params = {'key': "/flash/res/certificate.pem.crt", 'cert': "/flash/res/private.pem.key"})
 ```
 <br><br>
 - Set the MQTT client last will message that the server will publish when the client disconnects abnormally. Note: The last will message needs to be configured before mqtt start connection.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/mqtt/uiflow_block_mqtt_set_last_will.svg"> 
 
 ```python
-m5mqtt.set_last_will(str('/dev/last_will'),str('device disconnect'))
+mcmqtt.set_last_will(str('/dev/last_will'),str('device disconnect'))
 ```
 
 
@@ -71,7 +71,7 @@ m5mqtt.set_last_will(str('/dev/last_will'),str('device disconnect'))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/mqtt/uiflow_block_mqtt_start.svg"> 
 
 ```python
-m5mqtt.start()
+mcmqtt.start()
 ```
 
 <br><br>
@@ -79,7 +79,7 @@ m5mqtt.start()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/iot_cloud/mqtt/uiflow_block_mqtt_publish.svg"> 
 
 ```python
-m5mqtt.publish(str('/dev/pub'), str('Hello'), 0)
+mcmqtt.publish(str('/dev/pub'), str('Hello'), 0)
 ```
 
 
@@ -94,7 +94,7 @@ def fun__dev_sub_(topic_data):
   print(topic_data)
   pass
 
-m5mqtt.subscribe(str('/dev/sub'), fun__dev_sub_)
+mcmqtt.subscribe(str('/dev/sub'), fun__dev_sub_)
 ```
 
 
