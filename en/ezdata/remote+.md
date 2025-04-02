@@ -58,14 +58,14 @@ while True:
 
 
 ## API
-- Set the position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be updated automatically, so this API needs to be run once through UIFlow online mode first.
+- Set the position and size of the QR code of the generated web page. Note: After the web page is run for the first time, the remote parameter of the URL in the code will be updated automatically, so this API needs to be run once through MCLab online mode first.
 
 - In the program block menu, click Remote+ function, a preview window will appear on the right side of the page for adding controls, users can drag and drop to add controls to the blank space of the page. After all controls have been configured and the program has been pushed, click on the QR code at the top of the preview window to get a link to the control page.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/remote_plus/uiflow_block_remoteplus_set_qrcode.svg">
 
 ```python
-lcd.qrcode('https://flow.m5stack.com/remote?id=undefined', 72, 32, 176)
+lcd.qrcode('http://mclab.ai/remote?id=undefined', 72, 32, 176)
 ```
 
 
