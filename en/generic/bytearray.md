@@ -6,14 +6,14 @@ bytearray is a built-in mutable sequence type in Python for working with byte da
 
 Creates a bytearray, and adds, removes, and decodes elements within it
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/bytearray/uiflow_block_bytearray_example.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/bytearray/uiflow_block_bytearray_example.svg">
 
 ```python
-from m5stack import *
-from m5stack_ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 
-screen = M5Screen()
+screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
@@ -31,35 +31,35 @@ print(bytes2[5])
 ```
 
 ## API
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/bytearray/uiflow_block_variables_set.svg">
+- Creates a bytearray of the specified length
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/bytearray/uiflow_block_variables_set.svg">
 
 ```python
 bytes2 = bytearray(5)
 ```
 
-- Creates a bytearray of the specified length
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/bytearray/uiflow_block_bytearray_setIndex.svg">
+<br><br>
+- bytearray Specify index assignment
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/bytearray/uiflow_block_bytearray_setIndex.svg">
 
 ```python
 bytes2[0] = 104
 ```
 
-- bytearray Specify index assignment
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/bytearray/uiflow_block_bytearray_append.svg">
+<br><br>
+- Adds a byte to the end of the bytearray
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/bytearray/uiflow_block_bytearray_append.svg">
 
 ```python
 bytes2.append(33)
 ```
 
-- Adds a byte to the end of the bytearray
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/bytearray/uiflow_block_bytearray_decode.svg">
+<br><br>
+- bytearray string decoding
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/bytearray/uiflow_block_bytearray_decode.svg">
 
 ```python
 print(bytes2.decode('utf-8'))
 ```
 
-- bytearray string decoding
+
