@@ -21,16 +21,16 @@ screen.set_screen_bg_color(0xFFFFFF)
 date = None
 json_object = None
 
-date = py_2_json({'author':'MC4.0','people':100,'device':'CoreS3','number':'5'})
-print(json.dumps(date))
-print(get_json_keys(date))
-print(get_json_key(date, 'number'))
-print(get_json_values(date))
-print(get_json_keys_len(date))
-set_json_elements(date, 'people', 101)
-set_json_elements(date, 'devicetwo', 'core2')
+data = py_2_json({'author':'Maker&Coder','people':100,'device':'MC4.0','number':'5'})
+print(json.dumps(data))
+print(get_json_keys(data))
+print(get_json_key(data, 'number'))
+print(get_json_values(data))
+print(get_json_keys_len(data))
+set_json_elements(data, 'people', 101)
+set_json_elements(data, 'devicetwo', 'AICamera')
 delete_json_elements(json_object, 'number')
-print(json.dumps(date))
+print(json.dumps(data))
 print(json.loads('{"string":"stack","number":100}'))
 ```
 
