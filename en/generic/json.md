@@ -55,7 +55,7 @@ set_json_elements(data, 'devicetwo', 'core2')
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_create.svg"> 
 
 ```python
-data = py_2_json({'author':'MC4.0','people':100,'device':'CoreS3','number':'5'})
+data = py_2_json({'author':'MC4.0','people':100,'device':'MC4.0','number':'5'})
 ```
 
 <br><br>
