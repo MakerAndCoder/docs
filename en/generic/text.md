@@ -4,13 +4,17 @@
 
 How to use string functions
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_example.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_example.svg">
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import binascii
+
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
 string = None
 date = None
@@ -23,167 +27,165 @@ print(string.count('o'))
 print(not len(string))
 print(len(string))
 print(string.replace('e', 'w'))
-print('   m5stack   '.strip())
-print('hello world'.strip('h'))
+print('  MC4.0  '.strip())
+print('hello olleh'.strip('h'))
 print(str(2500))
-print((str('Hi! ') + str(string)))
+print((str('Hi!') + str(string)))
 date = binascii.hexlify('hello').decode()
 print(date.encode())
 print((binascii.unhexlify(date)).decode())
 print("%.0f"%float(date))
-
 ```
 
 ## API
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text.svg">
+- Create text content
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text.svg">
 
 ```python
 string = 'helloworld'
 ```
 
-- Create text content
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_add.svg">
-
-```python
-print(string.upper())
-```
-
+<br><br>
 - Concatenate text
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_changeCase.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_add.svg">
 
 ```python
 print(string.upper())
 ```
 
+<br><br>
 - Convert text content to uppercase or lowercase
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_changeCase.svg">
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_charAt.svg">
+```python
+print(string.upper())
+```
+
+<br><br>
+- Extract a specified portion of text
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_charAt.svg">
 
 ```python
 print(string[0])
 ```
 
-- Extract a specified portion of text
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_count.svg">
+<br><br>
+- Return the number of occurrences of a specified character in the text
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_count.svg">
 
 ```python
 print(string.count('o'))
 ```
 
-- Return the number of occurrences of a specified character in the text
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_isEmpty.svg">
+<br><br>
+- Check if the text is empty
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_isEmpty.svg">
 
 ```python
 print(not len(string))
 ```
 
-- Check if the text is empty
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_length.svg">
+<br><br>
+- Return the length of the text
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_length.svg">
 
 ```python
 print(len(string))
 ```
 
-- Return the length of the text
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_convent_str.svg">
+<br><br>
+- Convert other data types to strings
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_convent_str.svg">
 
 ```python
 print(str(2500))
 ```
 
-- Convert other data types to strings
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_decode_str.svg">
+<br><br>
+- Decode a string to a specified format
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_decode_str.svg">
 
 ```python
 print((binascii.unhexlify(date)).decode())
 ```
 
-- Decode a string to a specified format
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_encode_str.svg">
+<br><br>
+- Convert a string back to a bytes object
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_encode_str.svg">
 
 ```python
 print(date.encode())
 ```
 
-- Convert a string back to a bytes object
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_m5_text_bytestr_to_hexstr.svg">
+<br><br>
+- Encode a string to bytes
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_m5_text_bytestr_to_hexstr.svg">
 
 ```python
 date = binascii.hexlify('hello').decode()
 ```
 
-- Encode a string to bytes
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_m5_text_hexstr_to_bytestr.svg">
+<br><br>
+- Convert a string to a String
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_m5_text_hexstr_to_bytestr.svg">
 
 ```python
 print((binascii.unhexlify(date)).decode())
 ```
-
-- Convert a string to a String
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_math_split.svg">
+<br><br>
+- Perform string formatting to convert a float to a string without a decimal portion
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_math_split.svg">
 
 ```python
 print("%.0f"%float(date))
 ```
 
-- Perform string formatting to convert a float to a string without a decimal portion
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_print.svg">
+<br><br>
+- Print text
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_print.svg">
 
 ```python
 print('')
 ```
 
-- Print text
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_replace.svg">
+<br><br>
+- Replace text content
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_replace.svg">
 
 ```python
 print(string.replace('e', 'w'))
 ```
 
-- Replace text content
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_trim.svg">
+<br><br>
+- Remove leading and trailing whitespace from a string
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_trim.svg">
 
 ```python
-print('   m5stack   '.strip())
+print('  MC4.0  '.strip())
 ```
 
-- Remove leading and trailing whitespace from a string
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_trim_string.svg">
+<br><br>
+- Specify characters to remove from the beginning and end of a string
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_trim_string.svg">
 
 ```python
 print('hello world'.strip('h'))
 ```
 
-- Specify characters to remove from the beginning and end of a string
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_unescaped.svg">
+<br><br>
+- Keep the string unescaped, containing all original characters
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_unescaped.svg">
 
 ```python
 print('hello')
 ```
 
-- Keep the string unescaped, containing all original characters
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_prompt.svg">
-
+<br><br>
 - Terminal prompt. Prompt for input with a message
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_prompt.svg">
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/generic/Text/uiflow_block_text_prompt_ext.svg">
-
+<br><br>
 - Terminal prompt. Customize the prompt for input with a message
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_prompt_ext.svg">
+
+
