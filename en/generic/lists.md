@@ -7,9 +7,13 @@ Array processing is used with array functions
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Lists/uiflow_block_lists_Example.svg">
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
+
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
 
 list01 = None
 list02 = None
@@ -27,13 +31,10 @@ print(list02[1])
 print(first_index(list02, 1))
 print(list02[2 : 4])
 print(list(reversed(list02)))
-
 list02[-1] = 9
 print(list02)
-
 list01 = [2] * 2
 print(list01)
-
 print('1,2,3,4'.split(','))
 ```
 
