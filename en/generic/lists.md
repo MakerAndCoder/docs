@@ -95,7 +95,7 @@ print(len(list02))
 ```
 
 <br><br>
-- (Note: This is a duplicate of the previous functionality) Build a list using elements repeated a certain number of times
+- Build a list using elements repeated a certain number of times
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Lists/uiflow_block_lists_repeat.svg">
 
 ```python
