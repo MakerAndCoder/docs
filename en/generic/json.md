@@ -47,7 +47,7 @@ print(json.dumps(data))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_add_key_value.svg"> 
 
 ```python
-set_json_elements(data, 'devicetow', 'core2')
+set_json_elements(data, 'devicetwo', 'core2')
 ```
 
 <br><br>
