@@ -31,7 +31,7 @@ data.clear()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_set_map_key.svg">
 
 ```python
-date['a'] = '11'
+data['a'] = '11'
 ```
 
 <br><br>
@@ -39,7 +39,7 @@ date['a'] = '11'
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_get_map_in.svg">
 
 ```python
-print('a' in date.keys())
+print('a' in data.keys())
 ```
 
 <br><br>
@@ -47,7 +47,7 @@ print('a' in date.keys())
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_add_map_key.svg">
 
 ```python
-date['d'] = '4'
+data['d'] = '4'
 ```
 
 <br><br>
@@ -55,7 +55,7 @@ date['d'] = '4'
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_delete_map_key.svg">
 
 ```python
-date.pop('b')
+data.pop('b')
 ```
 
 <br><br>
@@ -63,7 +63,7 @@ date.pop('b')
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_get_map_key.svg">
 
 ```python
-print(date['b'])
+print(data['b'])
 ```
 
 <br><br>
@@ -71,7 +71,7 @@ print(date['b'])
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_map_clear.svg">
 
 ```python
-date.clear()
+data.clear()
 ```
 
 <br><br>
@@ -79,7 +79,7 @@ date.clear()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Map/uiflow_block_map_on_loop.svg">
 
 ```python
-date = {'a':1,'b':2,'c':'3'}
+data = {'a':1,'b':2,'c':'3'}
 ```
 
 
