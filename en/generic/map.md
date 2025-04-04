@@ -15,15 +15,15 @@ screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
-date = None
+data = None
 
-date = {'a':1,'b':2,'c':'3'}
-print('a' in date.keys())
-print(date['b'])
-date['d'] = '4'
-date['a'] = '11'
-date.pop('b')
-date.clear()
+data = {'a':1,'b':2,'c':'3'}
+print('a' in data.keys())
+print(data['b'])
+data['d'] = '4'
+data['a'] = '11'
+data.pop('b')
+data.clear()
 ```
 
 ## API
