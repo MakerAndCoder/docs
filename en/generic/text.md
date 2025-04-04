@@ -17,7 +17,7 @@ screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
 string = None
-date = None
+data = None
 
 string = 'hello world'
 print(string.upper())
@@ -31,10 +31,10 @@ print('  MC4.0  '.strip())
 print('hello olleh'.strip('h'))
 print(str(2500))
 print((str('Hi!') + str(string)))
-date = binascii.hexlify('hello').decode()
-print(date.encode())
-print((binascii.unhexlify(date)).decode())
-print("%.0f"%float(date))
+data = binascii.hexlify('hello').decode()
+print(data.encode())
+print((binascii.unhexlify(data)).decode())
+print("%.0f"%(data))
 ```
 
 ## API
@@ -106,7 +106,7 @@ print(str(2500))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_decode_str.svg">
 
 ```python
-print((binascii.unhexlify(date)).decode())
+print((binascii.unhexlify(data)).decode())
 ```
 
 <br><br>
@@ -114,7 +114,7 @@ print((binascii.unhexlify(date)).decode())
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_encode_str.svg">
 
 ```python
-print(date.encode())
+print(data.encode())
 ```
 
 <br><br>
@@ -122,7 +122,7 @@ print(date.encode())
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_m5_text_bytestr_to_hexstr.svg">
 
 ```python
-date = binascii.hexlify('hello').decode()
+data = binascii.hexlify('hello').decode()
 ```
 
 <br><br>
@@ -130,14 +130,14 @@ date = binascii.hexlify('hello').decode()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_m5_text_hexstr_to_bytestr.svg">
 
 ```python
-print((binascii.unhexlify(date)).decode())
+print((binascii.unhexlify(data)).decode())
 ```
 <br><br>
 - Perform string formatting to convert a float to a string without a decimal portion
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/Text/uiflow_block_text_math_split.svg">
 
 ```python
-print("%.0f"%float(date))
+print("%.0f"%float(data))
 ```
 
 <br><br>
