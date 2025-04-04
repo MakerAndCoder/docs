@@ -18,7 +18,7 @@ screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
 
-date = None
+data = None
 json_object = None
 
 data = py_2_json({'author':'Maker&Coder','people':100,'device':'MC4.0','number':'5'})
@@ -39,7 +39,7 @@ print(json.loads('{"string":"stack","number":100}'))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_dumps_json.svg"> 
 
 ```python
-print(json.dumps(date))
+print(json.dumps(data))
 ```
 
 <br><br>
@@ -47,7 +47,7 @@ print(json.dumps(date))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_add_key_value.svg"> 
 
 ```python
-set_json_elements(date, 'devicetow', 'core2')
+set_json_elements(data, 'devicetow', 'core2')
 ```
 
 <br><br>
@@ -55,7 +55,7 @@ set_json_elements(date, 'devicetow', 'core2')
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_create.svg"> 
 
 ```python
-date = py_2_json({'author':'MC4.0','people':100,'device':'CoreS3','number':'5'})
+data = py_2_json({'author':'MC4.0','people':100,'device':'CoreS3','number':'5'})
 ```
 
 <br><br>
@@ -63,7 +63,7 @@ date = py_2_json({'author':'MC4.0','people':100,'device':'CoreS3','number':'5'})
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_del_key.svg"> 
 
 ```python
-delete_json_elements(date, 'number')
+delete_json_elements(data, 'number')
 ```
 
 <br><br>
@@ -71,7 +71,7 @@ delete_json_elements(date, 'number')
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_get_key_value.svg"> 
 
 ```python
-print(get_json_key(date, 'number'))
+print(get_json_key(data, 'number'))
 ```
 
 <br><br>
@@ -79,7 +79,7 @@ print(get_json_key(date, 'number'))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_get_keys.svg"> 
 
 ```python
-print(get_json_keys(date))
+print(get_json_keys(data))
 ```
 
 <br><br>
@@ -87,7 +87,7 @@ print(get_json_keys(date))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_get_keys_len.svg"> 
 
 ```python
-print(get_json_keys_len(date))
+print(get_json_keys_len(data))
 ```
 
 <br><br>
@@ -95,7 +95,7 @@ print(get_json_keys_len(date))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_get_values.svg"> 
 
 ```python
-print(get_json_values(date))
+print(get_json_values(data))
 ```
 
 <br><br>
@@ -103,7 +103,7 @@ print(get_json_values(date))
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/generic/JSON/uiflow_block_json_set_key_value.svg"> 
 
 ```python
-set_json_elements(date, 'people', 101)
+set_json_elements(data, 'people', 101)
 ```
 
 <br><br>
