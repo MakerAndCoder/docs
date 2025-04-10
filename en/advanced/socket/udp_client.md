@@ -37,51 +37,49 @@ while True:
 udpsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 udpsocket.connect(('192.168.31.10', 5000))
 ```
-
+<br><br>
 - Create a socket server and specify the destination IP and port to send data to.
 
-<br><br>
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_sendmsg.svg"> 
 
 ```python
 udpsocket.send('Hello World')
 ```
-
+<br><br>
 - Send character data
 
-<br><br>
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_sendto.svg"> 
 
 ```python
 udpsocket.write('')
 ```
-
-- Write raw data
 <br><br>
+- Write raw data
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_sendto.svg"> 
 
 ```python
 udpsocket.sendto('Hello World', ('192.168.31.10', 5000))
 ```
-
-- Send data to the specified IP and port
 <br><br>
+- Send data to the specified IP and port
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_close.svg"> 
 
 ```python
 udpsocket.close()
 ```
-
-- Close the socket.
 <br><br>
+- Close the socket.
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_recv.svg"> 
 
 ```python
 data = udpsocket.recv(1024)
 ```
-
-- Block the receiving of listening data, set the maximum buffer length, and return when data is received.
 <br><br>
+- Block the receiving of listening data, set the maximum buffer length, and return when data is received.
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/advanced/socket/udp_client/uiflow_block_socket_udp_client_read.svg"> 
 
 ```python
