@@ -47,30 +47,3 @@ print(env_0.humidity)
 ```python
 print(env_0.pressure)
 ```
-
-<br><br>
-- Set the device running mode. This function only applies to ENV IV
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/unit/env/uiflow_block_unit_env4_get_mode.svg">
-
-```python
-env4_0.set_mode(0xFD)
-```
-
-<br><br>
-- Obtain the current device running mode. This function only applies to ENV IV
-  - NOHEAT_HIGHPRECISION: No heating, maintain high-precision measurement or control
-  - NOHEAT_MEDPRECISION: No heating, medium precision
-  - NOHEAT_LOWPRECISION: No heating, lowest precision
-  - HIGHHEAT_1S: High heating mode, heating cycle of 1 second
-  - HIGHHEAT_100MS: High heating mode, heating cycle of 100 milliseconds
-  - MEDHEAT_1S: Medium heating mode, heating cycle of 1 second
-  - MEDHEAT_100MS: Medium heating mode, heating cycle of 100 milliseconds
-  - LOWHEAT_1S: Low heating mode, heating cycle of 1 second
-  - LOWHEAT_100MS: Low heating mode, heating cycle of 100 milliseconds
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/unit/env/uiflow_block_unit_env4_get_mode.svg">
-
-```python
-print(env4_0.get_mode)
-```
-
-
