@@ -166,13 +166,11 @@ cat.is_connect_mqtt()
 ```
 
 <br><br>
-- Initializes the MQTT server connection settings, including the server address (mqtt.m5stack.com), port number (1883), client ID, username, password, and keepalive time.
+- Initializes the MQTT server connection settings, including the server address (mqtt.makerandcoder.com), port number (1883), client ID, username, password, and keepalive time.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/comx_cat1/uiflow_block_com_cat1_mqtt_connect.svg">
 
 ```python
-cat.mqtt_to_connect('mqtt.m5stack.com', 1883, '', '', '', 120
-
-)
+cat.mqtt_to_connect('mqtt.makerandcoder.com', 1883, '', '', '', 120)
 ```
 
 <br><br>
