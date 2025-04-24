@@ -2,7 +2,7 @@
 
 ## Example
 
-#> Perform a Ping test, establish a TCP connection and send a message via an M5Stack device, while also sending and receiving HTTP requests, and display the results of these operations on the screen.
+#> Perform a Ping test, establish a TCP connection and send a message via a Maker and Coder device, while also sending and receiving HTTP requests, and display the results of these operations on the screen.
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/comx_gsm/uiflow_block_com_gsm_demo.svg">
 
