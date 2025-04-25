@@ -315,7 +315,7 @@ catmiot.mqtt_ischeck_connect()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_catm/uiflow_block_iotbasecatm_mqtt_connect.svg">
 
 ```python
-catmiot.mqtt_to_connect('mqtt.m5stack.com', 1883, '', '', '', 120)
+catmiot.mqtt_to_connect('mqtt.makerandcoder.com', 1883, '', '', '', 120)
 ```
 
 <br><br>
