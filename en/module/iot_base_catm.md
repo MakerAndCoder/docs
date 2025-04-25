@@ -42,11 +42,11 @@ catmiot.delete_coap()
 
 <br><br>
 - Send a GET request via the CoAP protocol to retrieve resources from the specified URL.
-  - /m5stack-get: The specified URL path from which to retrieve resources.
+  - /makerandcoder-get: The specified URL path from which to retrieve resources.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_catm/uiflow_block_iotbasecatm_coap_get.svg">
 
 ```python
-catmiot.coap_request('/m5stack-get')
+catmiot.coap_request('/makerandcoder-get')
 ```
 
 <br><br>
@@ -61,12 +61,12 @@ catmiot.coap_to_connect('120.77.157.90', 5683)
 
 <br><br>
 - Send a POST request via the CoAP protocol to the specified URL.
-  - URL: /m5stack-post
+  - URL: /makerandcoder-post
   - Payload: Data payload to be sent.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_catm/uiflow_block_iotbasecatm_coap_post.svg">
 
 ```python
-catmiot.coap_request('/m5stack-post', 2, '')
+catmiot.coap_request('/makerandcoder-post', 2, '')
 ```
 
 <br><br>
