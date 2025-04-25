@@ -45,7 +45,7 @@ nbiot.coap_destroy()
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_nb/uiflow_block_iotbase_coap_get.svg">
 
 ```python
-nbiot.coap_get('/m5stack-get')
+nbiot.coap_get('/makerandcoder-get')
 ```
 
 <br><br>
@@ -57,19 +57,19 @@ nbiot.coap_to_connect('120.77.157.90', 5683)
 ```
 
 <br><br>
-- Sends a CoAP POST request with the specified URL. The content (payload) is sent in plain text (TEXT_PLAIN) format. The URL here is /m5stack-post.
+- Sends a CoAP POST request with the specified URL. The content (payload) is sent in plain text (TEXT_PLAIN) format. The URL here is /makerandcoder-post.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_nb/uiflow_block_iotbase_coap_post.svg">
 
 ```python
-nbiot.coap_post('/m5stack-post', '', content_format=0)
+nbiot.coap_post('/makerandcoder-post', '', content_format=0)
 ```
 
 <br><br>
-- Sends a CoAP PUT request with the specified URL, used to update resources or data. The payload's content format is also TEXT_PLAIN, and the URL is /m5stack-put.
+- Sends a CoAP PUT request with the specified URL, used to update resources or data. The payload's content format is also TEXT_PLAIN, and the URL is /makerandcoder-put.
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/iot_base_nb/uiflow_block_iotbase_coap_put.svg">
 
 ```python
-nbiot.coap_put('/m5stack-put', '', content_format=0)
+nbiot.coap_put('/makerandcoder-put', '', content_format=0)
 ```
 
 <br><br>
