@@ -5,18 +5,22 @@
 #>Print out the firmware version, control the output channel on and off, and read the input channel status
 
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_4in8out_demo4.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_4in8out_demo4.svg">
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
 import module
 
 import time
 
-setScreenColor(0x222222)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+
 i = None
+
 module_4in8out = module.get(module.MODULE_4IN8OUT)
 
 module_4in8out.init_i2c_address(0x45)
@@ -34,47 +38,47 @@ while True:
 ```
 
 ## API
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_module_4in8out_init.svg">
+- Initializes the I2C address of the device.
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_module_4in8out_init.svg">
 
 ```python
 module_4in8out.init_i2c_address(0x45)
 ```
 
-- Initializes the I2C address of the device.
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_module_4in8out_read_pin.svg">
+<br><br>
+- Retrieves the status or value of the input channel.
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_module_4in8out_read_pin.svg">
 
 ```python
 module_4in8out.read_input_pin(0)
 ```
 
-- Retrieves the status or value of the input channel.
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_module_4in8out_read_status.svg">
+<br><br>
+- Retrieves the status information of the device, selecting to get the firmware version (FW_VERSION).
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_module_4in8out_read_status.svg">
 
 ```python
 module_4in8out.read_status(0XFE)
 ```
 
-- Retrieves the status information of the device, selecting to get the firmware version (FW_VERSION).
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_module_4in8out_set_address.svg">
+<br><br>
+- Sets the I2C address of the device.
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_module_4in8out_set_address.svg">
 
 ```python
 module_4in8out.set_i2c_address(0x45)
 ```
 
-- Sets the I2C address of the device.
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/modules/4in8out/uiflow_block_module_4in8out_write_pin.svg">
+<br><br>
+- Controls the status of the output channel. This example sets the output status of channel 0, with options to set it to "ON" or "OFF." This is used to control devices or circuits connected to the channel, such as turning a relay or LED on or off.
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/modules/4in8out/uiflow_block_module_4in8out_write_pin.svg">
 
 ```python
 module_4in8out.write_output_pin(0, 1)
 ```
 
-- Controls the status of the output channel. This example sets the output status of channel 0, with options to set it to "ON" or "OFF." This is used to control devices or circuits connected to the channel, such as turning a relay or LED on or off.
 
+<br><br>
 ## Video
 
 <TabPanel>
