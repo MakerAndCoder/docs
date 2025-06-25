@@ -2,7 +2,7 @@
 
 Use the Microphone to listen
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/adc/uiflow_block_microphone_init.svg"> 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/hardwares/microphone/uiflow_block_microphone_init.svg"> 
 
 ```python
 from MakerAndCoder import *
