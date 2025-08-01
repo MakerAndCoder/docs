@@ -1,73 +1,104 @@
 # [DC Motor](/en/unit/color)
-
 ## Example
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_example.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-from m5stack import *
-from m5ui import *
+from MakerAndCoder import *
+from MakerAndCoder_ui import *
 from uiflow import *
+from MCLab.robocar import Robocar
 import unit
 
-setScreenColor(0x222222)
-color_0 = unit.get(unit.COLOR, unit.PORTA)
+screen = MCScreen()
+screen.clean_screen()
+screen.set_screen_bg_color(0xFFFFFF)
+motor_0 = unit.get(unit.DCMOTOR, unit.PORTA)
 
-while True:
-  print((str('R:') + str(str((color_0.red)))))
-  print((str('G:') + str(str((color_0.green)))))
-  print((str('B:') + str(str((color_0.blue)))))
-  wait_ms(2)
+robo = Robocar()
+robo.init_motor_module()
+if not robo.select_lego:
+  robo.encoder4.set_all_motors_mode(0x00)
+
+robo.set_motor_speed(1, 1, 50)
+robo.set_motor_speed(2, 1, 50)
+robo.set_motor_speed(3, 1, 50)
+robo.set_motor_speed(4, 1, 50)
+robo.motor_stop_all()
 ```
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_getD.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-print(color_0.rawData)
+robo.move_distance(distance=5, speed=50)
 ```
 
-- get rawData
+- Move [distance] cm at [speed] %
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_getB.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-print(color_0.blue)
+robo.motor_stop_all()
 ```
 
-- get Blue value
+- Motor stop all
 
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_getG.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-print(color_0.green)
+robo.set_motor_speed(motor_id=1, direction=1, speed=50)
 ```
 
-- get Green value
+- Set motor control motor [motor_id] dir [direction] speed [speed]
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_getR.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-print(color_0.red)
+robo.turn_angle(angle=90, direction="left")
 ```
 
-- get Red value
+- Set robo turn angle [angle] dir [direction]
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_set_gain.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-color_0.setGains(0x00)
+robo.step_motor(motor_id=1)
 ```
 
-- set gain value
+- Motor step motor [motor_id]
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/color/uiflow_block_color_set_integration_time.svg">
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
 
 ```python
-color_0.setIntegrationTime(0xFF)
+robo.run_forward(speed=50)
 ```
 
-- set integration value 
+- Run forward speed [speed] %
 
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+
+```python
+robo.run_backward(speed=50)
+```
+
+- Run backward speed [speed] %
+
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+
+```python
+robo.turn_left(speed=50)
+```
+
+- Turn left speed [speed] %
+
+<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+
+```python
+robo.turn_right(speed=50)
+```
+
+- Turn right speed [speed] %
+
+Let me know when you'd like to add the next module!
