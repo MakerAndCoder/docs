@@ -1,4 +1,4 @@
-# [Gyro](/en/unit/color)
+# [Gyroscope](/en/unit/color)
 
 ## Example
 
