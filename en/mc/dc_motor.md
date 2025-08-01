@@ -1,4 +1,4 @@
-# [Unit Color](/en/unit/color)
+# [DC Motor](/en/unit/color)
 
 ## Example
 
