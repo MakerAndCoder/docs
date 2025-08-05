@@ -25,6 +25,8 @@ while True:
   wait_ms(2)
 ```
 
+## API
+
 -Initialize the face detection module
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/1.svg">
 ```python
