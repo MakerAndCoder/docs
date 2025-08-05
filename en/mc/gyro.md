@@ -46,7 +46,7 @@ gyro = Gyro()
 gyro.init()
 ```
 
----
+
 
 Get X-axis Acceleration (m/s²) from Accelerometer 0
 
@@ -58,7 +58,7 @@ Get X-axis Acceleration (m/s²) from Accelerometer 0
 gyro.get_accel(0)[0]
 ```
 
----
+
 
 Get X-axis Acceleration (m/s²) from Accelerometer 1
 
@@ -70,7 +70,7 @@ Get X-axis Acceleration (m/s²) from Accelerometer 1
 gyro.get_accel(1)[0]
 ```
 
----
+
 
 Get X-axis Rotation Speed (°/s) from Gyroscope 0
 
@@ -82,7 +82,7 @@ Get X-axis Rotation Speed (°/s) from Gyroscope 0
 gyro.get_gyro(0)[0]
 ```
 
----
+
 
 Get X-axis Rotation Speed (°/s) from Gyroscope 1
 
@@ -94,7 +94,7 @@ Get X-axis Rotation Speed (°/s) from Gyroscope 1
 gyro.get_gyro(1)[0]
 ```
 
----
+
 
 Get Roll Angle (°) from Orientation Data
 
@@ -106,7 +106,7 @@ Get Roll Angle (°) from Orientation Data
 gyro.get_roll_pitch_yaw()[0]
 ```
 
----
+
 
 Get Pitch Angle (°) from Orientation Data
 
@@ -118,7 +118,6 @@ Get Pitch Angle (°) from Orientation Data
 gyro.get_roll_pitch_yaw()[1]
 ```
 
----
 
 Get Yaw Angle (°) from Orientation Data
 
