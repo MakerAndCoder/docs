@@ -47,6 +47,8 @@ color_detect.init()
 ```
 
 - Sends the color name (or "No color detected") over UART based on the following thresholds:
+- 
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/colordetect/2.svg">
 
 Red: (12, 71, 30, 70, 2, 50)
 
@@ -62,7 +64,6 @@ A_min , A_max → A channel range (green to red)
 
 B_min, B_max → B channel range (blue to yellow)
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/colordetect/2.svg">
 
 ```python
 color_detect.get_discover_color()
