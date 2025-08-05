@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/ex.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/ex.png">
 
 ```python
 from MakerAndCoder import *
@@ -45,28 +45,35 @@ MotorsStopAll()
 - initialize DC motor
 
   
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/1">
+```python
+robo.init_motor_module()
+```
 
+- Move forward or backward for certain distance with specific speed
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/4">
+```python
+robo.init_motor_module()
+```
 
 - Stop all motors
-
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/3.svg/2560px-Insert_image_here.svg.png">
-
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/3">
 ```python
-MotorsStopAll(
+MotorsStopAll()
 ```
 
 
-- control motor (1~4) in direction 1/2 with specifc speed
+- control motor (1~4) in direction 1 or 2 with specifc speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/4.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/2.png">
 ```python
 robo.set_motor_speed(1, 1, 50)
 ```
 
+
 - set robo turn angle
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/5.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/5.png">
 
 ```python
 turn_angle(45, 0)
@@ -75,14 +82,14 @@ turn_angle(45, 0)
 
 - stop motor
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/6.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/6.png">
 ```python
 robo.motor_stop(1)
 ```
 
 - run forward speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/7.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/7.png">
 
 ```python
 robo.move_forward(50)
@@ -90,7 +97,7 @@ robo.move_forward(50)
 
 - run backward speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/8.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/8.png">
 
 ```python
 robo.move_backward(50)
@@ -99,7 +106,7 @@ robo.move_backward(50)
 
 - run rightside speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/9.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/9.png">
 ```python
 robo.move_right(50)
 ```
@@ -108,7 +115,7 @@ robo.move_right(50)
 - run leftside speed
 
 
-  <img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/10.png">
+  <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/10.png">
 ```python
 robo.move_left(50)
 ```
@@ -116,7 +123,7 @@ robo.move_left(50)
 
 -rotate rightside speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/11.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/11.png">
 
 ```python
 robo.rotate_right(50)
@@ -125,7 +132,7 @@ robo.rotate_right(50)
 
 rotate leftside speed
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/12.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/12.png">
 
 ```python
 robo.rotate_left(50)
@@ -134,7 +141,7 @@ robo.rotate_left(50)
 
 - robo angle task
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/13.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/13.png">
 
 ```python
 robo.angle_task()
@@ -142,7 +149,7 @@ robo.angle_task()
 
 - clear encoder pulse motor
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/14.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/14.png">
 
 ```python
 robo.clear_encoder_count(1)
@@ -151,7 +158,7 @@ robo.clear_encoder_count(1)
 
 - check angle task (true or false)
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/15.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/15.png">
 
 ```python
 print(robo.angle_func)
@@ -159,7 +166,7 @@ print(robo.angle_func)
 
 
 - get encoder pulse motor (return int)
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/16.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/16.png">
 
 ```python
 print(robo.get_encoder_count(1))
@@ -168,7 +175,7 @@ print(robo.get_encoder_count(1))
 
 - get voltage value
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/17.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/17.png">
 
 ```python
 print(robo.get_encoder_vin_voltage())
