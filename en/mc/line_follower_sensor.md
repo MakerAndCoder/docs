@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/ex.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/ex.svg">
 
 ```python
 from MakerAndCoder import *
@@ -50,7 +50,7 @@ while True:
 
 - Initializes the line sensor connected to the specified port.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/1.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/1.svg">
 
 ```python
 robo = Robocar()
@@ -61,7 +61,7 @@ robo.ow_line_port_init(unit.PORTB)
 
 - Activates the built-in LED on the multi-line sensor.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/2.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/2.svg">
 
 ```python
 robo.ow_multi_line_led(1)
@@ -70,7 +70,7 @@ robo.ow_multi_line_led(1)
 
 - Returns the sensor readings from a two-line sensor module.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/3.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/3.svg">
 
 ```python
 (_, _) = robo.ow_two_line_get_sensor_values()
@@ -80,7 +80,7 @@ robo.ow_multi_line_led(1)
 
 - Reads the value from a specific line in a two-line sensor.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/4.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/4.svg">
 
 ```python
 robo.ow_two_line_get_sensor_value(id=1)
@@ -90,7 +90,7 @@ robo.ow_two_line_get_sensor_value(id=1)
 
 - Returns values from all sensors in a multi-line sensor module.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/5.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/5.svg">
 
 ```python
 (_, _, _, _, _) = robo.ow_multi_line_get_sensor_values()
@@ -99,7 +99,7 @@ robo.ow_two_line_get_sensor_value(id=1)
 
 - Retrieves a specific line follower channel in either digital or analog format
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/line_follower/6.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/line_follower/6.svg">
 
 ```python
 robo.ow_multi_line_get_sensor_value(id=1, data_type=0)
