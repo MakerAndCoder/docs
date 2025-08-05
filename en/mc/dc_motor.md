@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/dc_motor/ex.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/dc_motor/ex.svg">
 
 ```python
 from MakerAndCoder import *
