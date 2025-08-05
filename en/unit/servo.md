@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/servo/ex.svg">
 
 ```python
 servo_0.write_angle(90)
@@ -10,19 +10,17 @@ servo_0.write_angle(90)
 
 ## API
 
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/servo/uiflow_block_servo_unit_write_angle.svg">
+- Rotates the servo motor to the given angle (0–180°).
+
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/servo/1.svg">
 
 ```python
-servo_0.write_angle(90)
+servo_0.write_angle(0)
 ```
 
-- uiflow_block_servo_unit_write_angle
-
-<img class="blockly_svg" src="https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/static/assets/img/uiflow/blockly/unit/servo/uiflow_block_servo_unit_write_us.svg">
+- Controls the servo position by setting the pulse width in microseconds (typically 500–2500 µs).
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/servo/2.svg">
 
 ```python
 servo_0.write_us(600)
 ```
-
-- uiflow_block_servo_unit_write_us
-
