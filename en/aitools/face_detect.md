@@ -28,13 +28,15 @@ while True:
 ## API
 
 - Initialize the face detection module
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/1.svg">
 
 ```python
 face_detect.init()
 ```
 
--Returns the number of faces currently detected in the frame.
+- Returns the number of faces currently detected in the frame.
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/2.svg">
 
 ```python
@@ -42,6 +44,7 @@ face_detect.get_face_number()
 ```
 
 - Get details of each detected face
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/3.svg">
 
   - x: X-coordinate of the bounding box
