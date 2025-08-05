@@ -47,15 +47,15 @@ face_detect.get_face_number()
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/3.svg">
 
-  - x: X-coordinate of the bounding box
+  -- x: X-coordinate of the bounding box
   
-  - y: Y-coordinate of the bounding box
+  -- y: Y-coordinate of the bounding box
   
-  - w: Width of the bounding box
+  -- w: Width of the bounding box
   
-  - h: Height of the bounding box
+  -- h: Height of the bounding box
   
-  - value: Confidence score of the detection
+  -- value: Confidence score of the detection
   
 
 ```python
