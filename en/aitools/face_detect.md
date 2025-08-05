@@ -1,7 +1,7 @@
 # Face detection
 
-- Example
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/ex.svg">
+## Example
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/ex.svg">
 
 ```python
 from MakerAndCoder import *
@@ -34,14 +34,14 @@ face_detect.init()
 ```
 
 -Returns the number of faces currently detected in the frame.
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/2.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/2.svg">
 
 ```python
 face_detect.get_face_number()
 ```
 
 -Get details of each detected face
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/3.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/facedetect/3.svg">
 
   -x: X-coordinate of the bounding box
   
