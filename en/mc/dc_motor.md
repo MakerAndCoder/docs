@@ -41,42 +41,6 @@ MotorsStopAll()
 
 ## API
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
-
-```python
-from MakerAndCoder import *
-from MakerAndCoder_ui import *
-from uiflow import *
-from MCLab.robocar import Robocar
-
-
-screen = MCScreen()
-screen.clean_screen()
-screen.set_screen_bg_color(0xFFFFFF)
-
-
-
-
-robo = Robocar()
-robo.init_motor_module()
-if not robo.select_lego:
-  robo.encoder4.set_all_motors_mode(0x00)
-def normal_mode():
-  if not robo.select_lego:
-    robo.select_normal_mode()
-    for i in range(4):
-      robo.encoder4.set_motor_pwm_dutycycle(i, 0)
-
-def MotorsStopAll():
-  global _Direction, _For, _Type, _Speed, Distance_test, initial_ticks, required_ticks, revolutions_required
-  robo.motor_stop(1)
-  robo.motor_stop(2)
-  robo.motor_stop(3)
-  robo.motor_stop(4)
-
-
-
-```
 
 - initialize DC motor
 
