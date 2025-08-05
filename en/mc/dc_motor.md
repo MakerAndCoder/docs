@@ -52,12 +52,14 @@ robo.init_motor_module()
 
 - Move forward or backward for certain distance with specific speed
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/4">
+
 ```python
 robo.init_motor_module()
 ```
 
 - Stop all motors
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/3">
+
 ```python
 MotorsStopAll()
 ```
@@ -66,6 +68,7 @@ MotorsStopAll()
 - control motor (1~4) in direction 1 or 2 with specifc speed
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/2.png">
+
 ```python
 robo.set_motor_speed(1, 1, 50)
 ```
@@ -83,6 +86,7 @@ turn_angle(45, 0)
 - stop motor
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/6.png">
+
 ```python
 robo.motor_stop(1)
 ```
@@ -107,6 +111,7 @@ robo.move_backward(50)
 - run rightside speed
 
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/9.png">
+
 ```python
 robo.move_right(50)
 ```
@@ -115,7 +120,8 @@ robo.move_right(50)
 - run leftside speed
 
 
-  <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/10.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/10.png">
+  
 ```python
 robo.move_left(50)
 ```
