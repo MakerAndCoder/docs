@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/ex.svg">
 
 ```python
 from MakerAndCoder import *
@@ -17,53 +17,58 @@ screen.set_screen_bg_color(0xFFFFFF)
 
 robo = Robocar()
 
+label0 = MCLabel('label0', x=42, y=93, color=0x000, font=FONT_MONT_14, parent=None)
+label1 = MCLabel('label1', x=47, y=146, color=0x000, font=FONT_MONT_14, parent=None)
+
+
 robo.ultrasonic_port_init(unit.PORTC)
-robo.ultrasonic_rgb_color(1, 0xff0000, 50)
-robo.ultrasonic_rgb_color_from(1, 6, 0xff0000, 50)
+robo.ultrasonic_rgb_color_all(0xff0000, 50)
+while True:
+  label0.set_text(str((str('Distance (mm):') + str((robo.ultrasonic_rgb_sensor(mode=1))))))
+  label1.set_text(str((str('Distance (cm):') + str((robo.ultrasonic_rgb_sensor(mode=2))))))
+  wait_ms(2)
 ```
 
 ## API
+- Set up the ultrasonic sensor by assigning it to PORTC.
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/1.svg">
 
 ```python
+robo = Robocar()
 robo.ultrasonic_port_init(unit.PORTC)
 ```
 
-- initialize ultrasonic sensor
+- Set the color and brightness of the first LED on the ultrasonic sensor.
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/2.svg">
 
 ```python
 robo.ultrasonic_rgb_color(1, 0xff0000, 50)
 ```
 
-- set RGB ultrasonic LED index
+- Set the color and brightness from LED 1 to LED 6 on the ultrasonic sensor.
 
-
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/3.svg">
 
 ```python
 robo.ultrasonic_rgb_color_from(1, 6, 0xff0000, 50)
 ```
 
-- set RGB ultrasonic LED from
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+- Apply a single color and brightness setting to all LEDs on the ultrasonic sensor.
+
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/4.svg">
 
 ```python
 robo.ultrasonic_rgb_color_all(0xff0000, 50)
 ```
 
-- set RGB ultrasonic LED all color
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+- Retrieves the measured distance in either mm or cm.
+
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/5.svg">
 
 ```python
-print(robo.ultrasonic_rgb_sensor(mode=1))
+robo.ultrasonic_rgb_sensor(mode=1)
 ```
-
-- get RGB ultrasonic target distance value mode (return float)
-
-
-
