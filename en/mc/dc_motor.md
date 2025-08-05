@@ -46,6 +46,7 @@ MotorsStopAll()
 
   
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/dc_motor/1">
+
 ```python
 robo.init_motor_module()
 ```
