@@ -2,7 +2,7 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/ex.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/ex.svg">
 
 ```python
 from MakerAndCoder import *
@@ -32,7 +32,7 @@ while True:
 ## API
 - Set up the ultrasonic sensor by assigning it to PORTC.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/1.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/1.svg">
 
 ```python
 robo = Robocar()
@@ -41,7 +41,7 @@ robo.ultrasonic_port_init(unit.PORTC)
 
 - Set the color and brightness of the first LED on the ultrasonic sensor.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/2.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/2.svg">
 
 ```python
 robo.ultrasonic_rgb_color(1, 0xff0000, 50)
@@ -49,7 +49,7 @@ robo.ultrasonic_rgb_color(1, 0xff0000, 50)
 
 - Set the color and brightness from LED 1 to LED 6 on the ultrasonic sensor.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/3.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/3.svg">
 
 ```python
 robo.ultrasonic_rgb_color_from(1, 6, 0xff0000, 50)
@@ -58,7 +58,7 @@ robo.ultrasonic_rgb_color_from(1, 6, 0xff0000, 50)
 
 - Apply a single color and brightness setting to all LEDs on the ultrasonic sensor.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/4.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/4.svg">
 
 ```python
 robo.ultrasonic_rgb_color_all(0xff0000, 50)
@@ -67,7 +67,7 @@ robo.ultrasonic_rgb_color_all(0xff0000, 50)
 
 - Retrieves the measured distance in either mm or cm.
 
-<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/ultrasonic/5.svg">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/mc/ultrasonic/5.svg">
 
 ```python
 robo.ultrasonic_rgb_sensor(mode=1)
