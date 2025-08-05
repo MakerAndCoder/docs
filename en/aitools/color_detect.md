@@ -1,4 +1,4 @@
-# Face detection
+# Color detection
 
 ## Example
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/colordetect/ex.svg">
