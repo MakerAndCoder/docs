@@ -29,6 +29,7 @@ while True:
 
 - Initialize the face detection module
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/1.svg">
+
 ```python
 face_detect.init()
 ```
