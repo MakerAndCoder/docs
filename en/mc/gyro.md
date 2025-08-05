@@ -2,32 +2,32 @@
 
 ## Example
 
-<img class="blockly_svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Insert_image_here.svg/2560px-Insert_image_here.svg.png">
+<img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/gyro/ex.svg">
 
 ```python
 from MakerAndCoder import *
 from MakerAndCoder_ui import *
 from uiflow import *
 from MCLab.gyro_imu import Gyro
-import unit
+import time
 
 screen = MCScreen()
 screen.clean_screen()
 screen.set_screen_bg_color(0xFFFFFF)
-servo_0 = unit.get(unit.SERVO, unit.PORTC)
-color_0 = unit.get(unit.COLOR, unit.PORTA)
 
 gyro = Gyro()
 
+label0 = MCLabel('label0', x=39, y=67, color=0x000, font=FONT_MONT_14, parent=None)
+label1 = MCLabel('label1', x=39, y=111, color=0x000, font=FONT_MONT_14, parent=None)
+label2 = MCLabel('label2', x=39, y=158, color=0x000, font=FONT_MONT_14, parent=None)
+
+
 gyro.init()
 while True:
-  print(gyro.get_accel(0)[0])
-  print(gyro.get_accel(1)[0])
-  print(gyro.get_gyro(0)[0])
-  print(gyro.get_gyro(1)[0])
-  print(gyro.get_roll_pitch_yaw()[0])
-  print(gyro.get_roll_pitch_yaw()[1])
-  print(gyro.get_roll_pitch_yaw()[2])
+  label0.set_text(str((str('Accelerometer (X):') + str((gyro.get_accel(0)[0])))))
+  label1.set_text(str((str('Accelerometer (Y):') + str((gyro.get_accel(0)[1])))))
+  label2.set_text(str((str('Accelerometer (Z):') + str((gyro.get_accel(0)[2])))))
+  wait(1)
   wait_ms(2)
 ```
 
