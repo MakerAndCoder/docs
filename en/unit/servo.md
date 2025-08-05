@@ -21,7 +21,8 @@ while True:
   servo_0.write_angle(0)
   wait(2)
   servo_0.write_angle(50)
-  wait_ms(2)```
+  wait_ms(2)
+```
 
 ## API
 
