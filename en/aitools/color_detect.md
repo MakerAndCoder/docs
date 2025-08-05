@@ -54,6 +54,14 @@ Green: (0, 100, -128, -20, 20, 127)
 
 Blue: (0, 100, -128, 0, -128, -20)
 
+where each color is represnted using (L_min, L_max, A_min, A_max, B_min, B_max) 
+
+L_min, L_max → Lightness range (how light or dark the color is)
+
+A_min , A_max → A channel range (green to red)
+
+B_min, B_max → B channel range (blue to yellow)
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/colordetect/2.svg">
 
 ```python
