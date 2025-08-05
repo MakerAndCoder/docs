@@ -47,7 +47,7 @@ color_detect.init()
 ```
 
 - Sends the color name (or "No color detected") over UART based on the following thresholds:
-- 
+
 <img class="blockly_svg" src="https://makerandcoder.com/MCLab/blockly/aitools/colordetect/2.svg">
 
 Red: (12, 71, 30, 70, 2, 50)
